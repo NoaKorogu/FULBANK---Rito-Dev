@@ -1,0 +1,17 @@
+C:\Users\micka\Documents\Cours\Projet\Fulbank\Fulbank\obj\Debug\net8.0-windows\Fulbank.Form1.resources
+C:\Users\micka\Documents\Cours\Projet\Fulbank\Fulbank\obj\Debug\net8.0-windows\Fulbank.csproj.GenerateResource.cache
+C:\Users\micka\Documents\Cours\Projet\Fulbank\Fulbank\obj\Debug\net8.0-windows\Fulbank.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\micka\Documents\Cours\Projet\Fulbank\Fulbank\obj\Debug\net8.0-windows\Fulbank.AssemblyInfoInputs.cache
+C:\Users\micka\Documents\Cours\Projet\Fulbank\Fulbank\obj\Debug\net8.0-windows\Fulbank.AssemblyInfo.cs
+C:\Users\micka\Documents\Cours\Projet\Fulbank\Fulbank\obj\Debug\net8.0-windows\Fulbank.csproj.CoreCompileInputs.cache
+C:\Users\micka\Documents\Cours\Projet\Fulbank\Fulbank\bin\Debug\net8.0-windows\Fulbank.exe
+C:\Users\micka\Documents\Cours\Projet\Fulbank\Fulbank\bin\Debug\net8.0-windows\Fulbank.deps.json
+C:\Users\micka\Documents\Cours\Projet\Fulbank\Fulbank\bin\Debug\net8.0-windows\Fulbank.runtimeconfig.json
+C:\Users\micka\Documents\Cours\Projet\Fulbank\Fulbank\bin\Debug\net8.0-windows\Fulbank.dll
+C:\Users\micka\Documents\Cours\Projet\Fulbank\Fulbank\bin\Debug\net8.0-windows\Fulbank.pdb
+C:\Users\micka\Documents\Cours\Projet\Fulbank\Fulbank\obj\Debug\net8.0-windows\Fulbank.dll
+C:\Users\micka\Documents\Cours\Projet\Fulbank\Fulbank\obj\Debug\net8.0-windows\refint\Fulbank.dll
+C:\Users\micka\Documents\Cours\Projet\Fulbank\Fulbank\obj\Debug\net8.0-windows\Fulbank.pdb
+C:\Users\micka\Documents\Cours\Projet\Fulbank\Fulbank\obj\Debug\net8.0-windows\Fulbank.genruntimeconfig.cache
+C:\Users\micka\Documents\Cours\Projet\Fulbank\Fulbank\obj\Debug\net8.0-windows\ref\Fulbank.dll
+C:\Users\micka\Documents\Cours\Projet\Fulbank\Fulbank\obj\Debug\net8.0-windows\Fulbank.Welcome.resources
