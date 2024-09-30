@@ -1,4 +1,4 @@
-﻿namespace Fulbank
+﻿namespace Fulbank.View
 {
     partial class Form1
     {
@@ -28,52 +28,52 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btn_valid = new Button();
-            btn_cancel = new Button();
+            Btn_Valid = new Button();
+            Btn_Cancel = new Button();
             lbl_bvn = new Label();
-            label1 = new Label();
+            lbl_username = new Label();
             TxtboxUsername = new TextBox();
-            label2 = new Label();
+            lbl_password = new Label();
             TxtboxPasswrd = new TextBox();
             SuspendLayout();
             // 
-            // btn_valid
+            // Btn_Valid
             // 
-            btn_valid.BackColor = Color.FromArgb(34, 67, 153);
-            btn_valid.BackgroundImageLayout = ImageLayout.None;
-            btn_valid.FlatStyle = FlatStyle.Flat;
-            btn_valid.Font = new Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn_valid.ForeColor = Color.White;
-            btn_valid.Location = new Point(1012, 495);
-            btn_valid.Name = "btn_valid";
-            btn_valid.Size = new Size(350, 150);
-            btn_valid.TabIndex = 0;
-            btn_valid.Text = "Valider";
-            btn_valid.UseVisualStyleBackColor = false;
-            btn_valid.Click += btn_valid_Click;
+            Btn_Valid.BackColor = Color.FromArgb(34, 67, 153);
+            Btn_Valid.BackgroundImageLayout = ImageLayout.None;
+            Btn_Valid.FlatStyle = FlatStyle.Flat;
+            Btn_Valid.Font = new Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Btn_Valid.ForeColor = Color.White;
+            Btn_Valid.Location = new Point(744, 545);
+            Btn_Valid.Name = "Btn_Valid";
+            Btn_Valid.Size = new Size(250, 100);
+            Btn_Valid.TabIndex = 0;
+            Btn_Valid.Text = "Valider";
+            Btn_Valid.UseVisualStyleBackColor = false;
+            Btn_Valid.Click += btn_valid_Click;
             // 
-            // btn_cancel
+            // Btn_Cancel
             // 
-            btn_cancel.BackColor = Color.FromArgb(34, 67, 153);
-            btn_cancel.BackgroundImageLayout = ImageLayout.None;
-            btn_cancel.Enabled = false;
-            btn_cancel.FlatStyle = FlatStyle.Flat;
-            btn_cancel.Font = new Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn_cancel.ForeColor = Color.White;
-            btn_cancel.Location = new Point(12, 495);
-            btn_cancel.Name = "btn_cancel";
-            btn_cancel.Size = new Size(350, 150);
-            btn_cancel.TabIndex = 1;
-            btn_cancel.Text = "Annuler";
-            btn_cancel.UseVisualStyleBackColor = false;
-            btn_cancel.Click += btn_cancel_Click;
+            Btn_Cancel.BackColor = Color.FromArgb(34, 67, 153);
+            Btn_Cancel.BackgroundImageLayout = ImageLayout.Center;
+            Btn_Cancel.Enabled = false;
+            Btn_Cancel.FlatStyle = FlatStyle.Flat;
+            Btn_Cancel.Font = new Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Btn_Cancel.ForeColor = Color.White;
+            Btn_Cancel.Location = new Point(12, 545);
+            Btn_Cancel.Name = "Btn_Cancel";
+            Btn_Cancel.Size = new Size(250, 100);
+            Btn_Cancel.TabIndex = 1;
+            Btn_Cancel.Text = "Annuler";
+            Btn_Cancel.UseVisualStyleBackColor = false;
+            Btn_Cancel.Click += btn_cancel_Click;
             // 
             // lbl_bvn
             // 
             lbl_bvn.AutoSize = true;
             lbl_bvn.Font = new Font("Microsoft Sans Serif", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lbl_bvn.ForeColor = Color.White;
-            lbl_bvn.Location = new Point(352, 57);
+            lbl_bvn.Location = new Point(173, 57);
             lbl_bvn.Name = "lbl_bvn";
             lbl_bvn.RightToLeft = RightToLeft.No;
             lbl_bvn.Size = new Size(707, 69);
@@ -81,18 +81,18 @@
             lbl_bvn.Text = "Rentrez vos informations ";
             lbl_bvn.Click += label1_Click;
             // 
-            // label1
+            // lbl_username
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Microsoft Sans Serif", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(352, 164);
-            label1.Name = "label1";
-            label1.RightToLeft = RightToLeft.No;
-            label1.Size = new Size(293, 42);
-            label1.TabIndex = 3;
-            label1.Text = "Nom d'utilisateur";
-            label1.Click += label1_Click_1;
+            lbl_username.AutoSize = true;
+            lbl_username.Font = new Font("Microsoft Sans Serif", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbl_username.ForeColor = Color.White;
+            lbl_username.Location = new Point(352, 164);
+            lbl_username.Name = "lbl_username";
+            lbl_username.RightToLeft = RightToLeft.No;
+            lbl_username.Size = new Size(293, 42);
+            lbl_username.TabIndex = 3;
+            lbl_username.Text = "Nom d'utilisateur";
+            lbl_username.Click += label1_Click_1;
             // 
             // TxtboxUsername
             // 
@@ -104,18 +104,18 @@
             TxtboxUsername.Size = new Size(311, 34);
             TxtboxUsername.TabIndex = 4;
             // 
-            // label2
+            // lbl_password
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Microsoft Sans Serif", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(352, 298);
-            label2.Name = "label2";
-            label2.RightToLeft = RightToLeft.No;
-            label2.Size = new Size(243, 42);
-            label2.TabIndex = 5;
-            label2.Text = "Mot de passe";
-            label2.Click += label2_Click;
+            lbl_password.AutoSize = true;
+            lbl_password.Font = new Font("Microsoft Sans Serif", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbl_password.ForeColor = Color.White;
+            lbl_password.Location = new Point(352, 298);
+            lbl_password.Name = "lbl_password";
+            lbl_password.RightToLeft = RightToLeft.No;
+            lbl_password.Size = new Size(243, 42);
+            lbl_password.TabIndex = 5;
+            lbl_password.Text = "Mot de passe";
+            lbl_password.Click += label2_Click;
             // 
             // TxtboxPasswrd
             // 
@@ -132,14 +132,14 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(128, 194, 236);
-            ClientSize = new Size(1374, 755);
+            ClientSize = new Size(1006, 721);
             Controls.Add(TxtboxPasswrd);
-            Controls.Add(label2);
+            Controls.Add(lbl_password);
             Controls.Add(TxtboxUsername);
-            Controls.Add(label1);
+            Controls.Add(lbl_username);
             Controls.Add(lbl_bvn);
-            Controls.Add(btn_cancel);
-            Controls.Add(btn_valid);
+            Controls.Add(Btn_Cancel);
+            Controls.Add(Btn_Valid);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
@@ -149,12 +149,12 @@
 
         #endregion
 
-        private Button btn_valid;
-        private Button btn_cancel;
+        private Button Btn_Valid;
+        private Button Btn_Cancel;
         private Label lbl_bvn;
-        private Label label1;
+        private Label lbl_username;
         private TextBox TxtboxUsername;
-        private Label label2;
+        private Label lbl_password;
         private TextBox TxtboxPasswrd;
     }
 }

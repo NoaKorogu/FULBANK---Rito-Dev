@@ -1,0 +1,52 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\micka\\Documents\\Cours\\Projet\\Fulbank\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{04E32C90-65C6-4E04-8287-BA386E0EDC77}|Fulbank\\Fulbank.csproj|c:\\users\\micka\\documents\\cours\\projet\\fulbank\\fulbank\\view\\withdraw.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{04E32C90-65C6-4E04-8287-BA386E0EDC77}|Fulbank\\Fulbank.csproj|solutionrelative:fulbank\\view\\withdraw.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04E32C90-65C6-4E04-8287-BA386E0EDC77}|Fulbank\\Fulbank.csproj|c:\\users\\micka\\documents\\cours\\projet\\fulbank\\fulbank\\view\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{04E32C90-65C6-4E04-8287-BA386E0EDC77}|Fulbank\\Fulbank.csproj|solutionrelative:fulbank\\view\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Withdraw.cs [Conception]",
+              "DocumentMoniker": "C:\\Users\\micka\\Documents\\Cours\\Projet\\Fulbank\\Fulbank\\View\\Withdraw.cs",
+              "RelativeDocumentMoniker": "Fulbank\\View\\Withdraw.cs",
+              "ToolTip": "C:\\Users\\micka\\Documents\\Cours\\Projet\\Fulbank\\Fulbank\\View\\Withdraw.cs [Conception]",
+              "RelativeToolTip": "Fulbank\\View\\Withdraw.cs [Conception]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T15:19:01.974Z",
+              "EditorCaption": " [Conception]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomePage.cs [Conception]",
+              "DocumentMoniker": "C:\\Users\\micka\\Documents\\Cours\\Projet\\Fulbank\\Fulbank\\View\\HomePage.cs",
+              "RelativeDocumentMoniker": "Fulbank\\View\\HomePage.cs",
+              "ToolTip": "C:\\Users\\micka\\Documents\\Cours\\Projet\\Fulbank\\Fulbank\\View\\HomePage.cs [Conception]",
+              "RelativeToolTip": "Fulbank\\View\\HomePage.cs [Conception]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T14:58:20.107Z",
+              "EditorCaption": " [Conception]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
