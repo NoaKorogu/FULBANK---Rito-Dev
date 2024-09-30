@@ -1,0 +1,29 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Security.Cryptography.X509Certificates;
+using System.Text;
+using System.Threading.Tasks;
+
+
+namespace Fulbank.Model
+{
+    public class Users
+    {
+        public int Id { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
+
+        public ICollection<Account> Accounts { get; set; }
+        public ICollection<Operation> Operations { get; set; }
+
+
+
+        public Users(string TheUsername, string ThePassword) 
+        {
+            this.Username = TheUsername;
+            this.Password = ThePassword;
+        }
+    }
+}
