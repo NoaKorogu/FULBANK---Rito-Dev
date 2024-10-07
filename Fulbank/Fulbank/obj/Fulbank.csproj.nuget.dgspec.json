@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\micka\\Documents\\Cours\\Projet\\Fulbank\\Fulbank\\Fulbank.csproj": {}
+    "C:\\Users\\micka\\Documents\\Cours\\Projet\\FULBANK---Rito-Dev\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\Fulbank.csproj": {}
   },
   "projects": {
-    "C:\\Users\\micka\\Documents\\Cours\\Projet\\Fulbank\\Fulbank\\Fulbank.csproj": {
+    "C:\\Users\\micka\\Documents\\Cours\\Projet\\FULBANK---Rito-Dev\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\Fulbank.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\micka\\Documents\\Cours\\Projet\\Fulbank\\Fulbank\\Fulbank.csproj",
+        "projectUniqueName": "C:\\Users\\micka\\Documents\\Cours\\Projet\\FULBANK---Rito-Dev\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\Fulbank.csproj",
         "projectName": "Fulbank",
-        "projectPath": "C:\\Users\\micka\\Documents\\Cours\\Projet\\Fulbank\\Fulbank\\Fulbank.csproj",
+        "projectPath": "C:\\Users\\micka\\Documents\\Cours\\Projet\\FULBANK---Rito-Dev\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\Fulbank.csproj",
         "packagesPath": "C:\\Users\\micka\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\micka\\Documents\\Cours\\Projet\\Fulbank\\Fulbank\\obj\\",
+        "outputPath": "C:\\Users\\micka\\Documents\\Cours\\Projet\\FULBANK---Rito-Dev\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

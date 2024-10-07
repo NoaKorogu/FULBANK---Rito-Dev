@@ -9,10 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="ViewModel\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Compile Update="View\User\Login.cs">
       <SubType>Form</SubType>
     </Compile>

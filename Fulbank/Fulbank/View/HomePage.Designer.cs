@@ -36,7 +36,8 @@
             Btn_Withdraw = new Button();
             Btn_Payment = new Button();
             Btn_BAcc = new Button();
-            lbl_money = new Label();
+            Lbl_Hello = new Label();
+            Lbl_Pseudo = new Label();
             SuspendLayout();
             // 
             // Btn_Leave
@@ -157,16 +158,26 @@
             Btn_BAcc.UseVisualStyleBackColor = false;
             Btn_BAcc.Click += Btn_BAcc_Click;
             // 
-            // lbl_money
+            // Lbl_Hello
             // 
-            lbl_money.AutoSize = true;
-            lbl_money.Font = new Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbl_money.ForeColor = Color.White;
-            lbl_money.Location = new Point(431, 96);
-            lbl_money.Name = "lbl_money";
-            lbl_money.Size = new Size(130, 39);
-            lbl_money.TabIndex = 9;
-            lbl_money.Text = "0 euros";
+            Lbl_Hello.AutoSize = true;
+            Lbl_Hello.Font = new Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Lbl_Hello.ForeColor = Color.White;
+            Lbl_Hello.Location = new Point(465, 66);
+            Lbl_Hello.Name = "Lbl_Hello";
+            Lbl_Hello.Size = new Size(95, 39);
+            Lbl_Hello.TabIndex = 9;
+            Lbl_Hello.Text = "Salut";
+            // 
+            // Lbl_Pseudo
+            // 
+            Lbl_Pseudo.AutoSize = true;
+            Lbl_Pseudo.Font = new Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Lbl_Pseudo.ForeColor = Color.White;
+            Lbl_Pseudo.Location = new Point(465, 132);
+            Lbl_Pseudo.Name = "Lbl_Pseudo";
+            Lbl_Pseudo.Size = new Size(0, 39);
+            Lbl_Pseudo.TabIndex = 10;
             // 
             // FormHP
             // 
@@ -174,7 +185,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(128, 194, 236);
             ClientSize = new Size(1024, 768);
-            Controls.Add(lbl_money);
+            Controls.Add(Lbl_Pseudo);
+            Controls.Add(Lbl_Hello);
             Controls.Add(Btn_BAcc);
             Controls.Add(Btn_Payment);
             Controls.Add(Btn_Withdraw);
@@ -201,6 +213,7 @@
         private Button Btn_Withdraw;
         private Button Btn_Payment;
         private Button Btn_BAcc;
-        private Label lbl_money;
+        private Label Lbl_Hello;
+        private Label Lbl_Pseudo;
     }
 }

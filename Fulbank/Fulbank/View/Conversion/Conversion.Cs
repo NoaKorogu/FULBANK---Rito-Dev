@@ -13,6 +13,7 @@ namespace Fulbank.View
 {
     public partial class Conversion : Form
     {
+        public string AmountValue { get; set; }
         public Conversion()
         {
             InitializeComponent();
@@ -46,6 +47,29 @@ namespace Fulbank.View
             MainForm.MainPanel.Controls.Clear();
             MainForm.MainPanel.Controls.Add(cchoose);
             cchoose.Show();
+        }
+
+        private void Conversion_Load(object sender, EventArgs e)
+        {
+            if (AmountValue != null)
+            {
+                Lbl_M1.Text = AmountValue;
+            }
+            else
+            {
+                Lbl_M1.Text = "0";
+            }
+        }
+
+        private void Btn_Rev_Click(object sender, EventArgs e)
+        {
+            string temp = Lbl_Type1.Text;
+            Lbl_Type1.Text = Lbl_Type2.Text;
+            Lbl_Type2.Text = temp;
+            temp = Lbl_M1.Text;
+            Lbl_M1.Text = Lbl_M2.Text;
+            Lbl_M2.Text = temp;
+
         }
     }
 }

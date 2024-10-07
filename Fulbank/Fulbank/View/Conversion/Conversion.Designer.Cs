@@ -38,6 +38,8 @@
             Lbl_Arrow = new Label();
             Lbl_M2 = new Label();
             Lbl_Title = new Label();
+            Lbl_Type1 = new Label();
+            Lbl_Type2 = new Label();
             SuspendLayout();
             // 
             // Btn_Leave
@@ -112,6 +114,7 @@
             Btn_Rev.TabIndex = 7;
             Btn_Rev.Text = "Inverser";
             Btn_Rev.UseVisualStyleBackColor = false;
+            Btn_Rev.Click += Btn_Rev_Click;
             // 
             // Btn_Change
             // 
@@ -133,9 +136,9 @@
             Lbl_M1.ForeColor = Color.White;
             Lbl_M1.Location = new Point(157, 91);
             Lbl_M1.Name = "Lbl_M1";
-            Lbl_M1.Size = new Size(115, 36);
+            Lbl_M1.Size = new Size(32, 36);
             Lbl_M1.TabIndex = 9;
-            Lbl_M1.Text = "0 euros";
+            Lbl_M1.Text = "0";
             // 
             // Lbl_Arrow
             // 
@@ -153,9 +156,9 @@
             Lbl_M2.ForeColor = Color.White;
             Lbl_M2.Location = new Point(717, 91);
             Lbl_M2.Name = "Lbl_M2";
-            Lbl_M2.Size = new Size(99, 36);
+            Lbl_M2.Size = new Size(32, 36);
             Lbl_M2.TabIndex = 11;
-            Lbl_M2.Text = "0 BTC";
+            Lbl_M2.Text = "0";
             // 
             // Lbl_Title
             // 
@@ -168,12 +171,34 @@
             Lbl_Title.TabIndex = 12;
             Lbl_Title.Text = "Conversion";
             // 
+            // Lbl_Type1
+            // 
+            Lbl_Type1.AutoSize = true;
+            Lbl_Type1.ForeColor = Color.White;
+            Lbl_Type1.Location = new Point(308, 91);
+            Lbl_Type1.Name = "Lbl_Type1";
+            Lbl_Type1.Size = new Size(90, 36);
+            Lbl_Type1.TabIndex = 13;
+            Lbl_Type1.Text = "euros";
+            // 
+            // Lbl_Type2
+            // 
+            Lbl_Type2.AutoSize = true;
+            Lbl_Type2.ForeColor = Color.White;
+            Lbl_Type2.Location = new Point(852, 91);
+            Lbl_Type2.Name = "Lbl_Type2";
+            Lbl_Type2.Size = new Size(74, 36);
+            Lbl_Type2.TabIndex = 14;
+            Lbl_Type2.Text = "BTC";
+            // 
             // Conversion
             // 
             AutoScaleDimensions = new SizeF(17F, 36F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(128, 194, 236);
             ClientSize = new Size(1024, 768);
+            Controls.Add(Lbl_Type2);
+            Controls.Add(Lbl_Type1);
             Controls.Add(Lbl_Title);
             Controls.Add(Lbl_M2);
             Controls.Add(Lbl_Arrow);
@@ -189,6 +214,7 @@
             Margin = new Padding(6, 5, 6, 5);
             Name = "Conversion";
             Text = "Conversion";
+            Load += Conversion_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -205,5 +231,7 @@
         private Label Lbl_Arrow;
         private Label Lbl_M2;
         private Label Lbl_Title;
+        private Label Lbl_Type1;
+        private Label Lbl_Type2;
     }
 }
