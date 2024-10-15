@@ -60,3 +60,6 @@ C:\Users\micka\Documents\Cours\Projet\FULBANK---Rito-Dev\FULBANK---Rito-Dev\Fulb
 C:\Users\micka\Documents\Cours\Projet\FULBANK---Rito-Dev\FULBANK---Rito-Dev\Fulbank\Fulbank\obj\Debug\net8.0-windows\Fulbank.pdb
 C:\Users\micka\Documents\Cours\Projet\FULBANK---Rito-Dev\FULBANK---Rito-Dev\Fulbank\Fulbank\obj\Debug\net8.0-windows\Fulbank.genruntimeconfig.cache
 C:\Users\micka\Documents\Cours\Projet\FULBANK---Rito-Dev\FULBANK---Rito-Dev\Fulbank\Fulbank\obj\Debug\net8.0-windows\ref\Fulbank.dll
+C:\Users\micka\Documents\Cours\Projet\FULBANK---Rito-Dev\FULBANK---Rito-Dev\Fulbank\Fulbank\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\micka\Documents\Cours\Projet\FULBANK---Rito-Dev\FULBANK---Rito-Dev\Fulbank\Fulbank\obj\Debug\net8.0-windows\Fulbank.csproj.AssemblyReference.cache
+C:\Users\micka\Documents\Cours\Projet\FULBANK---Rito-Dev\FULBANK---Rito-Dev\Fulbank\Fulbank\obj\Debug\net8.0-windows\Fulbank.csproj.Up2Date

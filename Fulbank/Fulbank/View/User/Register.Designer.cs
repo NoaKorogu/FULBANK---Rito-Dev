@@ -35,8 +35,10 @@
             lbl_password = new Label();
             TxtboxUsername = new TextBox();
             lbl_username = new Label();
-            textBox1 = new TextBox();
+            TxtboxPasswrdRe = new TextBox();
             lbl_password2 = new Label();
+            Btn_Hide = new Button();
+            Lbl_Care = new Label();
             SuspendLayout();
             // 
             // Btn_Cancel
@@ -125,16 +127,16 @@
             lbl_username.TabIndex = 7;
             lbl_username.Text = "Nom d'utilisateur";
             // 
-            // textBox1
+            // TxtboxPasswrdRe
             // 
-            textBox1.BackColor = Color.FromArgb(128, 194, 236);
-            textBox1.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.ForeColor = Color.White;
-            textBox1.Location = new Point(297, 452);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(349, 34);
-            textBox1.TabIndex = 12;
-            textBox1.TextChanged += textBox1_TextChanged;
+            TxtboxPasswrdRe.BackColor = Color.FromArgb(128, 194, 236);
+            TxtboxPasswrdRe.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            TxtboxPasswrdRe.ForeColor = Color.White;
+            TxtboxPasswrdRe.Location = new Point(297, 452);
+            TxtboxPasswrdRe.Name = "TxtboxPasswrdRe";
+            TxtboxPasswrdRe.Size = new Size(349, 34);
+            TxtboxPasswrdRe.TabIndex = 12;
+            TxtboxPasswrdRe.TextChanged += textBox1_TextChanged;
             // 
             // lbl_password2
             // 
@@ -148,13 +150,41 @@
             lbl_password2.TabIndex = 11;
             lbl_password2.Text = "Retapez votre mot de passe";
             // 
+            // Btn_Hide
+            // 
+            Btn_Hide.BackColor = Color.FromArgb(34, 67, 153);
+            Btn_Hide.BackgroundImageLayout = ImageLayout.None;
+            Btn_Hide.FlatStyle = FlatStyle.Flat;
+            Btn_Hide.Font = new Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Btn_Hide.ForeColor = Color.White;
+            Btn_Hide.Location = new Point(762, 375);
+            Btn_Hide.Name = "Btn_Hide";
+            Btn_Hide.Size = new Size(250, 100);
+            Btn_Hide.TabIndex = 18;
+            Btn_Hide.Text = "Caché / Visible";
+            Btn_Hide.UseVisualStyleBackColor = false;
+            Btn_Hide.Click += Btn_Hide_Click;
+            // 
+            // Lbl_Care
+            // 
+            Lbl_Care.AutoSize = true;
+            Lbl_Care.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Lbl_Care.ForeColor = Color.Red;
+            Lbl_Care.Location = new Point(418, 390);
+            Lbl_Care.Name = "Lbl_Care";
+            Lbl_Care.RightToLeft = RightToLeft.No;
+            Lbl_Care.Size = new Size(0, 20);
+            Lbl_Care.TabIndex = 19;
+            // 
             // Register
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(128, 194, 236);
             ClientSize = new Size(1024, 768);
-            Controls.Add(textBox1);
+            Controls.Add(Lbl_Care);
+            Controls.Add(Btn_Hide);
+            Controls.Add(TxtboxPasswrdRe);
             Controls.Add(lbl_password2);
             Controls.Add(TxtboxPasswrd);
             Controls.Add(lbl_password);
@@ -166,6 +196,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "Register";
             Text = "Register";
+            Load += Register_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -179,7 +210,9 @@
         private Label lbl_password;
         private TextBox TxtboxUsername;
         private Label lbl_username;
-        private TextBox textBox1;
+        private TextBox TxtboxPasswrdRe;
         private Label lbl_password2;
+        private Button Btn_Hide;
+        private Label Lbl_Care;
     }
 }

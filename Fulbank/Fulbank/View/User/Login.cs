@@ -3,14 +3,15 @@ namespace Fulbank.View
 {
     public partial class Form1 : Form
     {
-        
+
         public Form1()
         {
             InitializeComponent();
             Btn_Valid.FlatStyle = FlatStyle.Flat;
             Btn_Valid.FlatAppearance.BorderSize = 0;
-            Btn_Cancel .FlatStyle = FlatStyle.Flat;
+            Btn_Cancel.FlatStyle = FlatStyle.Flat;
             Btn_Cancel.FlatAppearance.BorderSize = 0;
+            TxtboxPasswrd.PasswordChar = '*';
 
 
         }
@@ -59,6 +60,25 @@ namespace Fulbank.View
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void TxtboxPasswrd_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Btn_Hide_Click(object sender, EventArgs e)
+        {
+            if (TxtboxPasswrd.PasswordChar == '*')
+            {
+                Lbl_Care.Text = "Attention le mode visible est activé !";
+                TxtboxPasswrd.PasswordChar = '\0';
+            }
+            else
+            {
+                Lbl_Care.Text = " ";
+                TxtboxPasswrd.PasswordChar = '*';
+            }
         }
     }
 }

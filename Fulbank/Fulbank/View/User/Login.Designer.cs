@@ -35,6 +35,8 @@
             TxtboxUsername = new TextBox();
             lbl_password = new Label();
             TxtboxPasswrd = new TextBox();
+            Btn_Hide = new Button();
+            Lbl_Care = new Label();
             SuspendLayout();
             // 
             // Btn_Valid
@@ -125,6 +127,33 @@
             TxtboxPasswrd.Name = "TxtboxPasswrd";
             TxtboxPasswrd.Size = new Size(349, 34);
             TxtboxPasswrd.TabIndex = 6;
+            TxtboxPasswrd.TextChanged += TxtboxPasswrd_TextChanged;
+            // 
+            // Btn_Hide
+            // 
+            Btn_Hide.BackColor = Color.FromArgb(34, 67, 153);
+            Btn_Hide.BackgroundImageLayout = ImageLayout.None;
+            Btn_Hide.FlatStyle = FlatStyle.Flat;
+            Btn_Hide.Font = new Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Btn_Hide.ForeColor = Color.White;
+            Btn_Hide.Location = new Point(762, 375);
+            Btn_Hide.Name = "Btn_Hide";
+            Btn_Hide.Size = new Size(250, 100);
+            Btn_Hide.TabIndex = 17;
+            Btn_Hide.Text = "Caché / Visible";
+            Btn_Hide.UseVisualStyleBackColor = false;
+            Btn_Hide.Click += Btn_Hide_Click;
+            // 
+            // Lbl_Care
+            // 
+            Lbl_Care.AutoSize = true;
+            Lbl_Care.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Lbl_Care.ForeColor = Color.Red;
+            Lbl_Care.Location = new Point(425, 326);
+            Lbl_Care.Name = "Lbl_Care";
+            Lbl_Care.RightToLeft = RightToLeft.No;
+            Lbl_Care.Size = new Size(0, 20);
+            Lbl_Care.TabIndex = 18;
             // 
             // Form1
             // 
@@ -132,6 +161,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(128, 194, 236);
             ClientSize = new Size(1024, 768);
+            Controls.Add(Lbl_Care);
+            Controls.Add(Btn_Hide);
             Controls.Add(TxtboxPasswrd);
             Controls.Add(lbl_password);
             Controls.Add(TxtboxUsername);
@@ -157,5 +188,7 @@
         private TextBox TxtboxUsername;
         private Label lbl_password;
         private TextBox TxtboxPasswrd;
+        private Button Btn_Hide;
+        private Label Lbl_Care;
     }
 }

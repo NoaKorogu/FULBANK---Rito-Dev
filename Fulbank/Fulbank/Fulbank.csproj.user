@@ -7,7 +7,7 @@
     <Compile Update="View\Acc\CryptoAcc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="View\Change.cs">
+    <Compile Update="View\Conversion\Change.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="View\Conversion\ConvChoose.cs">
