@@ -6,15 +6,14 @@ using System.Threading.Tasks;
 
 namespace Fulbank.Model
 {
-    public class CurrencyType
+    internal class Currency_type
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
+        public int Id {get; set;}
+        public string Name {get; set;}
 
-        public ICollection<Account> Accounts { get; set; }
-
-        public CurrencyType(string name)
+        public Currency_type(int id, string name)
         {
+            this.Id = id;
             this.Name = name;
         }
     } 

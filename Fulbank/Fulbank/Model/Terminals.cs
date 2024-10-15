@@ -6,17 +6,14 @@ using System.Threading.Tasks;
 
 namespace Fulbank.Model
 {
-    public class Terminals
+    internal class Terminals
     {
-        public int Id { get; set; }
-        public string Location { get; set; }
-        public int balance { get; set; }
+        public int Id {get; set;}
+        public string Location{get; set;}
+        public int balance {get; set;}
 
-        // Navigation properties
-        public ICollection<Operation> Operations { get; set; }
-
-        public Terminals(string Location, int balance) 
-        { 
+        public Terminals(int id, string Location, int balance) { 
+            this.Id = id;
             this.Location = Location;
             this.balance = balance;
         }

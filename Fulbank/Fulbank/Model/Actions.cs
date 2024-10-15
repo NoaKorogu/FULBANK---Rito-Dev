@@ -7,19 +7,16 @@ using System.Threading.Tasks;
 
 namespace Fulbank.Model
 {
-    public class Actions
+    internal class Actions
     {
         public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
 
-        public ICollection<Operation> Operations { get; set; }
-    
-
-        public Actions(string name, string description) 
-        { 
-                this.Name = name;
-                this.Description = description;
+        public Actions(int id, string name, string description) { 
+            this.Id = id;
+            this.Name = name;
+            this.Description = description;
         }
     }
 }

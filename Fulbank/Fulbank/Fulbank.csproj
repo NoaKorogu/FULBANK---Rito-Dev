@@ -9,15 +9,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="ViewModel\" />
+    <PackageReference Include="MySqlConnector" Version="2.3.7" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="MySql.Data" Version="9.0.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Update="View\Register.cs">
+    <Compile Update="View\User\Login.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

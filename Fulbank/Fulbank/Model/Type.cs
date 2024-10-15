@@ -6,16 +6,15 @@ using System.Threading.Tasks;
 
 namespace Fulbank.Model
 {
-    public class Type
+    internal class Type
     {
         public int Id { get; set; }
         public string Name { get; set; }
         public decimal Rate { get; set; }
 
-        public ICollection<Account> Accounts { get; set; }
-
-        public Type(string name, decimal rate)
+        public Type(int id, string name, decimal rate)
         {
+            this.Id = id;
             this.Name = name;
             this.Rate = rate;
         }

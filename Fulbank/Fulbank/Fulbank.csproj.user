@@ -1,7 +1,49 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="View\Acc\BankAcc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\Acc\CryptoAcc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\Change.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\Conversion\ConvChoose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\Conversion\Conversion.Cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\HomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\Install.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\User\Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\Search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\transfer\amount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\transfer\ChooseUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\User\Welcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="View\Welcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\Withdraw.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
