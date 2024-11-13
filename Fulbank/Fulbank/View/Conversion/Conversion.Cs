@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualBasic;
+﻿using Fulbank.ViewModel;
+using Microsoft.VisualBasic;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,9 +15,23 @@ namespace Fulbank.View
     public partial class Conversion : Form
     {
         public string AmountValue { get; set; }
+
         public Conversion()
         {
             InitializeComponent();
+        }
+
+        private async Task UpdateLabels(decimal userInput)
+        {
+            decimal price = await ApiUsage.Bitcoin("eur");
+            decimal eutobitcoin = 1 / price;
+
+            // Utiliser la valeur entrée par l'utilisateur pour calculer et mettre à jour les labels
+            decimal userValue = userInput;
+            Lbl_M2.Text = userValue.ToString("0.######");
+            // Par exemple, convertir l'input de l'utilisateur en bitcoin
+            decimal convertedValue = userValue * eutobitcoin;
+            Lbl_M2.Text = convertedValue.ToString("0.######"); // Ajouter un label pour afficher la valeur convertie
         }
 
         private void Btn_Leave_Click(object sender, EventArgs e)
@@ -49,11 +64,19 @@ namespace Fulbank.View
             cchoose.Show();
         }
 
-        private void Conversion_Load(object sender, EventArgs e)
+        private async void Conversion_Load(object sender, EventArgs e) // Marquer la méthode comme async
         {
             if (AmountValue != null)
             {
                 Lbl_M1.Text = AmountValue;
+                if (decimal.TryParse(AmountValue, out decimal userValue))
+                {
+                    await UpdateLabels(userValue); // Utiliser await pour appeler UpdateLabels
+                }
+                else
+                {
+                    MessageBox.Show("Erreur: Valeur non valide.");
+                }
             }
             else
             {
@@ -69,7 +92,6 @@ namespace Fulbank.View
             temp = Lbl_M1.Text;
             Lbl_M1.Text = Lbl_M2.Text;
             Lbl_M2.Text = temp;
-
         }
     }
 }

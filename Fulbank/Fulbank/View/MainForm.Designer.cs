@@ -38,7 +38,6 @@
             Pnl_Main.Name = "Pnl_Main";
             Pnl_Main.Size = new Size(1024, 768);
             Pnl_Main.TabIndex = 0;
-            Pnl_Main.Paint += Pnl_Main_Paint;
             // 
             // MainForm
             // 

@@ -37,6 +37,8 @@
             Btn_Valid = new Button();
             Lbl_Amount = new Label();
             Lbl_Euro = new Label();
+            TxtBx_MoneyAdd = new TextBox();
+            TxtBx_MoneySupp = new TextBox();
             SuspendLayout();
             // 
             // Btn_Add1
@@ -80,7 +82,7 @@
             Btn_Add100.Name = "Btn_Add100";
             Btn_Add100.Size = new Size(250, 100);
             Btn_Add100.TabIndex = 12;
-            Btn_Add100.Text = "Ajout 100 euros";
+            Btn_Add100.Text = "Ajout personnalisé";
             Btn_Add100.UseVisualStyleBackColor = false;
             Btn_Add100.Click += Btn_Add100_Click;
             // 
@@ -140,7 +142,7 @@
             Btn_Rmv100.Name = "Btn_Rmv100";
             Btn_Rmv100.Size = new Size(250, 100);
             Btn_Rmv100.TabIndex = 16;
-            Btn_Rmv100.Text = "Enlever 100 euros";
+            Btn_Rmv100.Text = "Enlevement personnalisé";
             Btn_Rmv100.UseVisualStyleBackColor = false;
             Btn_Rmv100.Click += Btn_Rmv100_Click;
             // 
@@ -182,12 +184,28 @@
             Lbl_Euro.Text = "euro";
             Lbl_Euro.TextAlign = ContentAlignment.BottomCenter;
             // 
+            // TxtBx_MoneyAdd
+            // 
+            TxtBx_MoneyAdd.Location = new Point(268, 405);
+            TxtBx_MoneyAdd.Name = "TxtBx_MoneyAdd";
+            TxtBx_MoneyAdd.Size = new Size(173, 41);
+            TxtBx_MoneyAdd.TabIndex = 20;
+            // 
+            // TxtBx_MoneySupp
+            // 
+            TxtBx_MoneySupp.Location = new Point(583, 405);
+            TxtBx_MoneySupp.Name = "TxtBx_MoneySupp";
+            TxtBx_MoneySupp.Size = new Size(173, 41);
+            TxtBx_MoneySupp.TabIndex = 21;
+            // 
             // ConvChoose
             // 
             AutoScaleDimensions = new SizeF(17F, 36F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(128, 194, 236);
             ClientSize = new Size(1024, 768);
+            Controls.Add(TxtBx_MoneySupp);
+            Controls.Add(TxtBx_MoneyAdd);
             Controls.Add(Lbl_Euro);
             Controls.Add(Lbl_Amount);
             Controls.Add(Btn_Valid);
@@ -203,6 +221,7 @@
             Margin = new Padding(6, 5, 6, 5);
             Name = "ConvChoose";
             Text = "ConvChoose";
+            Load += ConvChoose_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -219,5 +238,7 @@
         private Button Btn_Valid;
         private Label Lbl_Amount;
         private Label Lbl_Euro;
+        private TextBox TxtBx_MoneyAdd;
+        private TextBox TxtBx_MoneySupp;
     }
 }

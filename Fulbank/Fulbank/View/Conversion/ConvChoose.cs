@@ -65,9 +65,16 @@ namespace Fulbank.View
 
         private void Btn_Add100_Click(object sender, EventArgs e)
         {
-            ConvChooseCode convChooseCode = new ConvChooseCode(this);
-            convChooseCode.AddAmount(100);
-            Lbl_Amount.Text = Lbl_AmountControl.Text;
+            if(TxtBx_MoneyAdd.Visible == true)
+            {
+                ConvChooseCode convChooseCode = new ConvChooseCode(this); 
+                convChooseCode.AddAmountFromTextBox(TxtBx_MoneyAdd.Text); 
+                Lbl_Amount.Text = Lbl_AmountControl.Text;
+                TxtBx_MoneyAdd.Visible = false;
+            }
+            else {
+                TxtBx_MoneyAdd.Visible = true;
+            };
         }
 
         private void Btn_Rmv1_Click(object sender, EventArgs e)
@@ -86,9 +93,23 @@ namespace Fulbank.View
 
         private void Btn_Rmv100_Click(object sender, EventArgs e)
         {
-            ConvChooseCode convChooseCode = new ConvChooseCode(this);
-            convChooseCode.SupAmount(100);
-            Lbl_Amount.Text = Lbl_AmountControl.Text;
+            if (TxtBx_MoneySupp.Visible == true)
+            {
+                ConvChooseCode convChooseCode = new ConvChooseCode(this); 
+                convChooseCode.SupAmountFromTextBox(TxtBx_MoneySupp.Text); 
+                Lbl_Amount.Text = Lbl_AmountControl.Text;
+                TxtBx_MoneySupp.Visible = false;
+            }
+            else
+            {
+                TxtBx_MoneySupp.Visible = true;
+            };
+        }
+
+        private void ConvChoose_Load(object sender, EventArgs e)
+        {
+            TxtBx_MoneySupp.Visible = false;
+            TxtBx_MoneyAdd.Visible = false;
         }
     }
 }

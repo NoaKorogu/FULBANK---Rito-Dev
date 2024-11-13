@@ -72,5 +72,23 @@ namespace Fulbank.ViewModel.Conversion
                 MessageBox.Show("Lbl_AmountControl n'est pas initialisé.");
             }
         }
+        public void AddAmountFromTextBox(string amountText)
+        {
+            if (int.TryParse(amountText, out int amounts))
+            {
+                AddAmount(amounts);
+            }
+            else
+            {
+                MessageBox.Show("Le format de la valeur ajoutée n'est pas valide.");
+            }
+        }
+
+        public void SupAmountFromTextBox(string amountText)
+        {
+            int.TryParse(amountText, out int amounts);
+            SupAmount(amounts);
+        }
+
     }
 }

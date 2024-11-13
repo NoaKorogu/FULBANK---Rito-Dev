@@ -12,7 +12,7 @@ namespace Fulbank.ViewModel
 {
     internal class ApiUsage
     {
-        private static async Task Ethereum(string[] args)
+        public static async Task<decimal> Ethereum(string desire)
         {
             string url = "https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd,eur&precision=full";
 
@@ -25,25 +25,38 @@ namespace Fulbank.ViewModel
                 JObject json = JObject.Parse(responseBody);
                 decimal usdPrice = json["ethereum"]["usd"].Value<decimal>();
                 decimal eurPrice = json["ethereum"]["eur"].Value<decimal>();
-
+                if (desire == "eur")
+                {
+                    return eurPrice;
+                }
+                else
+                {
+                    return usdPrice;
+                }
             }
         }
 
-        private static async Task Bitcoin(string[] args)
+        public static async Task<decimal> Bitcoin(string desire)
         {
-            string url = "https://api.coingecko.com/api/v3/simple/price?ids=bitcoins&vs_currencies=usd,eur&precision=full";
-
+            string url = "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd,eur&precision=full";
             using (HttpClient client = new HttpClient())
             {
                 HttpResponseMessage response = await client.GetAsync(url);
                 response.EnsureSuccessStatusCode();
                 string responseBody = await response.Content.ReadAsStringAsync();
-
                 JObject json = JObject.Parse(responseBody);
                 decimal usdPrice = json["bitcoin"]["usd"].Value<decimal>();
                 decimal eurPrice = json["bitcoin"]["eur"].Value<decimal>();
-
+                if (desire == "eur")
+                {
+                    return eurPrice;
+                }
+                else
+                {
+                    return usdPrice;
+                }
             }
+
         }
     }
 }
