@@ -112,7 +112,7 @@
             Btn_Rev.Name = "Btn_Rev";
             Btn_Rev.Size = new Size(250, 100);
             Btn_Rev.TabIndex = 7;
-            Btn_Rev.Text = "Inverser";
+            Btn_Rev.Text = "Changer la monnaie";
             Btn_Rev.UseVisualStyleBackColor = false;
             Btn_Rev.Click += Btn_Rev_Click;
             // 
@@ -129,6 +129,7 @@
             Btn_Change.TabIndex = 8;
             Btn_Change.Text = "Changer la crypto";
             Btn_Change.UseVisualStyleBackColor = false;
+            Btn_Change.Click += Btn_Change_Click;
             // 
             // Lbl_M1
             // 
@@ -177,9 +178,9 @@
             Lbl_Type1.ForeColor = Color.White;
             Lbl_Type1.Location = new Point(308, 91);
             Lbl_Type1.Name = "Lbl_Type1";
-            Lbl_Type1.Size = new Size(90, 36);
+            Lbl_Type1.Size = new Size(32, 36);
             Lbl_Type1.TabIndex = 13;
-            Lbl_Type1.Text = "euros";
+            Lbl_Type1.Text = "€";
             // 
             // Lbl_Type2
             // 

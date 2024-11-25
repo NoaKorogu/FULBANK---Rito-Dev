@@ -15,23 +15,51 @@ namespace Fulbank.View
     public partial class Conversion : Form
     {
         public string AmountValue { get; set; }
+        public decimal priceBTCeur;
+        public decimal priceBTCusd;
+        public decimal priceETHeur;
+        public decimal priceETHusd;
 
         public Conversion()
         {
             InitializeComponent();
+            LoadPricesAsync(); // Appeler la méthode async dans le constructeur
         }
 
-        private async Task UpdateLabels(decimal userInput)
+        private async Task LoadPricesAsync()
         {
-            decimal price = await ApiUsage.Bitcoin("eur");
-            decimal eutobitcoin = 1 / price;
+            priceBTCeur = await ApiCache.GetCryptoPrice("bitcoin", "eur");
+            priceBTCusd = await ApiCache.GetCryptoPrice("bitcoin", "usd");
+            priceETHeur = await ApiCache.GetCryptoPrice("ethereum", "eur");
+            priceETHusd = await ApiCache.GetCryptoPrice("ethereum", "usd");
+        }
 
-            // Utiliser la valeur entrée par l'utilisateur pour calculer et mettre à jour les labels
+
+        private async Task UpdateLabels(decimal userInput, string desire)
+        {
+            decimal price = desire == "eur" ? priceBTCeur : priceBTCusd;
+            decimal eutoBitcoin = 1 / price;
             decimal userValue = userInput;
-            Lbl_M2.Text = userValue.ToString("0.######");
-            // Par exemple, convertir l'input de l'utilisateur en bitcoin
-            decimal convertedValue = userValue * eutobitcoin;
-            Lbl_M2.Text = convertedValue.ToString("0.######"); // Ajouter un label pour afficher la valeur convertie
+
+            Lbl_M2.Text = eutoBitcoin.ToString("0.######");
+            Lbl_Type2.Text = "BTC";
+            Lbl_Type1.Text = desire == "eur" ? "€" : "$";
+
+            decimal convertedValue = userValue * eutoBitcoin;
+            Lbl_M2.Text = convertedValue.ToString("0.######");
+        }
+
+        private async Task UpdateLabelsEth(decimal userInput, string desire)
+        {
+            decimal price = desire == "eur" ? priceETHeur : priceETHusd;
+            decimal eutoEth = 1 / price;
+            decimal userValue = userInput;
+
+            Lbl_Type2.Text = "Eth";
+            Lbl_Type1.Text = desire == "eur" ? "€" : "$";
+
+            decimal convertedValue = userValue * eutoEth;
+            Lbl_M2.Text = convertedValue.ToString("0.######");
         }
 
         private void Btn_Leave_Click(object sender, EventArgs e)
@@ -71,7 +99,7 @@ namespace Fulbank.View
                 Lbl_M1.Text = AmountValue;
                 if (decimal.TryParse(AmountValue, out decimal userValue))
                 {
-                    await UpdateLabels(userValue); // Utiliser await pour appeler UpdateLabels
+                    await UpdateLabels(userValue, "eur"); // Utiliser await pour appeler UpdateLabels
                 }
                 else
                 {
@@ -84,14 +112,59 @@ namespace Fulbank.View
             }
         }
 
-        private void Btn_Rev_Click(object sender, EventArgs e)
+        private async void Btn_Rev_Click(object sender, EventArgs e)
         {
-            string temp = Lbl_Type1.Text;
-            Lbl_Type1.Text = Lbl_Type2.Text;
-            Lbl_Type2.Text = temp;
-            temp = Lbl_M1.Text;
-            Lbl_M1.Text = Lbl_M2.Text;
-            Lbl_M2.Text = temp;
+            decimal userValue = decimal.Parse(Lbl_M1.Text);
+            if (Lbl_Type2.Text == "BTC")
+            {
+                if(Lbl_Type1.Text == "€")
+                {
+                    await UpdateLabels(userValue, "usd");
+                }
+                else
+                {
+                    await UpdateLabels(userValue, "eur");
+                }
+            }
+            else 
+            {
+                if(Lbl_Type1.Text == "€")
+                {
+                    await UpdateLabelsEth(userValue, "usd");
+                }
+                else
+                {
+                    await UpdateLabelsEth(userValue, "eur");
+                }
+            }
+        }
+
+        private async void Btn_Change_Click(object sender, EventArgs e)
+        {
+            decimal userValue = decimal.Parse(Lbl_M1.Text);
+
+            if (Lbl_Type1.Text == "€")
+            {
+                if (Lbl_Type2.Text == "BTC")
+                {
+                    await UpdateLabelsEth(userValue, "eur");
+                }
+                else
+                {
+                    await UpdateLabels(userValue, "eur");
+                }
+            }
+            else
+            {
+                if (Lbl_Type2.Text == "BTC")
+                {
+                    await UpdateLabelsEth(userValue, "usd");
+                }
+                else
+                {
+                    await UpdateLabels(userValue, "usd");
+                }
+            }
         }
     }
 }
