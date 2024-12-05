@@ -52,7 +52,7 @@
             Btn_Add1.Name = "Btn_Add1";
             Btn_Add1.Size = new Size(250, 100);
             Btn_Add1.TabIndex = 10;
-            Btn_Add1.Text = "Ajout 1 euro";
+            Btn_Add1.Text = "Ajout 1 €/$";
             Btn_Add1.UseVisualStyleBackColor = false;
             Btn_Add1.Click += Btn_Add1_Click;
             // 
@@ -67,7 +67,7 @@
             Btn_Add10.Name = "Btn_Add10";
             Btn_Add10.Size = new Size(250, 100);
             Btn_Add10.TabIndex = 11;
-            Btn_Add10.Text = "Ajout 10 euros";
+            Btn_Add10.Text = "Ajout 10 €/$";
             Btn_Add10.UseVisualStyleBackColor = false;
             Btn_Add10.Click += Btn_Add10_Click;
             // 
@@ -97,7 +97,7 @@
             Btn_Cancel.Name = "Btn_Cancel";
             Btn_Cancel.Size = new Size(250, 100);
             Btn_Cancel.TabIndex = 13;
-            Btn_Cancel.Text = "Annuler";
+            Btn_Cancel.Text = "Passer en crypto";
             Btn_Cancel.UseVisualStyleBackColor = false;
             Btn_Cancel.Click += Btn_Cancel_Click;
             // 
@@ -112,7 +112,7 @@
             Btn_Rmv1.Name = "Btn_Rmv1";
             Btn_Rmv1.Size = new Size(250, 100);
             Btn_Rmv1.TabIndex = 14;
-            Btn_Rmv1.Text = "Enlever 1 euro";
+            Btn_Rmv1.Text = "Enlever 1 €/$";
             Btn_Rmv1.UseVisualStyleBackColor = false;
             Btn_Rmv1.Click += Btn_Rmv1_Click;
             // 
@@ -127,7 +127,7 @@
             Btn_Rmv10.Name = "Btn_Rmv10";
             Btn_Rmv10.Size = new Size(250, 100);
             Btn_Rmv10.TabIndex = 15;
-            Btn_Rmv10.Text = "Enlever 10 euro";
+            Btn_Rmv10.Text = "Enlever 10 €/$";
             Btn_Rmv10.UseVisualStyleBackColor = false;
             Btn_Rmv10.Click += Btn_Rmv10_Click;
             // 
@@ -165,11 +165,11 @@
             // 
             Lbl_Amount.AutoSize = true;
             Lbl_Amount.ForeColor = Color.White;
-            Lbl_Amount.Location = new Point(488, 68);
+            Lbl_Amount.Location = new Point(470, 68);
             Lbl_Amount.Name = "Lbl_Amount";
-            Lbl_Amount.Size = new Size(32, 36);
+            Lbl_Amount.Size = new Size(57, 36);
             Lbl_Amount.TabIndex = 18;
-            Lbl_Amount.Text = "0";
+            Lbl_Amount.Text = "0.0";
             Lbl_Amount.TextAlign = ContentAlignment.BottomCenter;
             Lbl_Amount.Click += Lbl_Amount_Click;
             // 
@@ -177,11 +177,11 @@
             // 
             Lbl_Euro.AutoSize = true;
             Lbl_Euro.ForeColor = Color.White;
-            Lbl_Euro.Location = new Point(470, 128);
+            Lbl_Euro.Location = new Point(470, 138);
             Lbl_Euro.Name = "Lbl_Euro";
-            Lbl_Euro.Size = new Size(75, 36);
+            Lbl_Euro.Size = new Size(57, 36);
             Lbl_Euro.TabIndex = 19;
-            Lbl_Euro.Text = "euro";
+            Lbl_Euro.Text = "€/$";
             Lbl_Euro.TextAlign = ContentAlignment.BottomCenter;
             // 
             // TxtBx_MoneyAdd

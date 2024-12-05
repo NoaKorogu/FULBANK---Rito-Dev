@@ -19,12 +19,12 @@ namespace Fulbank.ViewModel.Conversion
 
         }
 
-        public void AddAmount(int amounts)
+        public void AddAmount(decimal amounts)
         {
             if (_form.Lbl_AmountControl != null)
             {
-                int currentAmount;
-                if (int.TryParse(_form.Lbl_AmountControl.Text, out currentAmount))
+                decimal currentAmount;
+                if (decimal.TryParse(_form.Lbl_AmountControl.Text, out currentAmount))
                 {
                     _form.Lbl_AmountControl.Text = (currentAmount + amounts).ToString();
                 }
@@ -41,14 +41,14 @@ namespace Fulbank.ViewModel.Conversion
             }
         }
 
-        public void SupAmount(int amounts)
+        public void SupAmount(decimal amounts)
         {
             if (_form.Lbl_AmountControl != null)
             {
-                int currentAmount;
-                if (int.TryParse(_form.Lbl_AmountControl.Text, out currentAmount))
+                decimal currentAmount;
+                if (decimal.TryParse(_form.Lbl_AmountControl.Text, out currentAmount))
                 {
-                    int newAmount = currentAmount - amounts;
+                    decimal newAmount = currentAmount - amounts;
                     if (newAmount >= 0)
                     {
                         _form.Lbl_AmountControl.Text = newAmount.ToString();
@@ -56,7 +56,7 @@ namespace Fulbank.ViewModel.Conversion
                     else
                     {
                         // Gérer le cas où la nouvelle valeur serait inférieure à 0
-                        newAmount = 0;
+                        newAmount = 0.0m;
                         _form.Lbl_AmountControl.Text = newAmount.ToString();
                     }
                 }
@@ -74,7 +74,7 @@ namespace Fulbank.ViewModel.Conversion
         }
         public void AddAmountFromTextBox(string amountText)
         {
-            if (int.TryParse(amountText, out int amounts))
+            if (decimal.TryParse(amountText, out decimal amounts))
             {
                 AddAmount(amounts);
             }
@@ -86,7 +86,7 @@ namespace Fulbank.ViewModel.Conversion
 
         public void SupAmountFromTextBox(string amountText)
         {
-            int.TryParse(amountText, out int amounts);
+            decimal.TryParse(amountText, out decimal amounts);
             SupAmount(amounts);
         }
 

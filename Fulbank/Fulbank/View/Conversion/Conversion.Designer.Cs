@@ -176,7 +176,7 @@
             // 
             Lbl_Type1.AutoSize = true;
             Lbl_Type1.ForeColor = Color.White;
-            Lbl_Type1.Location = new Point(308, 91);
+            Lbl_Type1.Location = new Point(322, 91);
             Lbl_Type1.Name = "Lbl_Type1";
             Lbl_Type1.Size = new Size(32, 36);
             Lbl_Type1.TabIndex = 13;
@@ -234,5 +234,6 @@
         private Label Lbl_Title;
         private Label Lbl_Type1;
         private Label Lbl_Type2;
-    }
+
+        }
 }

@@ -3,28 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\micka\\Documents\\Cours\\Projet\\FULBANK---Rito-Dev\\FULBANK---Rito-Dev\\Fulbank\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{04E32C90-65C6-4E04-8287-BA386E0EDC77}|Fulbank\\Fulbank.csproj|c:\\users\\micka\\documents\\cours\\projet\\fulbank---rito-dev\\fulbank---rito-dev\\fulbank\\fulbank\\viewmodel\\apicache.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{04E32C90-65C6-4E04-8287-BA386E0EDC77}|Fulbank\\Fulbank.csproj|solutionrelative:fulbank\\viewmodel\\apicache.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{04E32C90-65C6-4E04-8287-BA386E0EDC77}|Fulbank\\Fulbank.csproj|c:\\users\\micka\\documents\\cours\\projet\\fulbank---rito-dev\\fulbank---rito-dev\\fulbank\\fulbank\\view\\conversion\\conversion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{04E32C90-65C6-4E04-8287-BA386E0EDC77}|Fulbank\\Fulbank.csproj|solutionrelative:fulbank\\view\\conversion\\conversion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04E32C90-65C6-4E04-8287-BA386E0EDC77}|Fulbank\\Fulbank.csproj|c:\\users\\micka\\documents\\cours\\projet\\fulbank---rito-dev\\fulbank---rito-dev\\fulbank\\fulbank\\view\\conversion\\change.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{04E32C90-65C6-4E04-8287-BA386E0EDC77}|Fulbank\\Fulbank.csproj|solutionrelative:fulbank\\view\\conversion\\change.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{04E32C90-65C6-4E04-8287-BA386E0EDC77}|Fulbank\\Fulbank.csproj|C:\\Users\\micka\\Documents\\Cours\\Projet\\FULBANK---Rito-Dev\\FULBANK---Rito-Dev\\Fulbank\\fulbank\\view\\conversion\\conversion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{04E32C90-65C6-4E04-8287-BA386E0EDC77}|Fulbank\\Fulbank.csproj|solutionrelative:fulbank\\view\\conversion\\conversion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{04E32C90-65C6-4E04-8287-BA386E0EDC77}|Fulbank\\Fulbank.csproj|c:\\users\\micka\\documents\\cours\\projet\\fulbank---rito-dev\\fulbank---rito-dev\\fulbank\\fulbank\\view\\conversion\\change.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{04E32C90-65C6-4E04-8287-BA386E0EDC77}|Fulbank\\Fulbank.csproj|c:\\users\\micka\\documents\\cours\\projet\\fulbank---rito-dev\\fulbank---rito-dev\\fulbank\\fulbank\\viewmodel\\apicache.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04E32C90-65C6-4E04-8287-BA386E0EDC77}|Fulbank\\Fulbank.csproj|solutionrelative:fulbank\\viewmodel\\apicache.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04E32C90-65C6-4E04-8287-BA386E0EDC77}|Fulbank\\Fulbank.csproj|c:\\users\\micka\\documents\\cours\\projet\\fulbank---rito-dev\\fulbank---rito-dev\\fulbank\\fulbank\\viewmodel\\conversion\\convchoosecode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04E32C90-65C6-4E04-8287-BA386E0EDC77}|Fulbank\\Fulbank.csproj|solutionrelative:fulbank\\viewmodel\\conversion\\convchoosecode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04E32C90-65C6-4E04-8287-BA386E0EDC77}|Fulbank\\Fulbank.csproj|C:\\Users\\micka\\Documents\\Cours\\Projet\\FULBANK---Rito-Dev\\FULBANK---Rito-Dev\\Fulbank\\fulbank\\view\\conversion\\change.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{04E32C90-65C6-4E04-8287-BA386E0EDC77}|Fulbank\\Fulbank.csproj|solutionrelative:fulbank\\view\\conversion\\change.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04E32C90-65C6-4E04-8287-BA386E0EDC77}|Fulbank\\Fulbank.csproj|c:\\users\\micka\\documents\\cours\\projet\\fulbank---rito-dev\\fulbank---rito-dev\\fulbank\\fulbank\\view\\conversion\\convchoose.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04E32C90-65C6-4E04-8287-BA386E0EDC77}|Fulbank\\Fulbank.csproj|solutionrelative:fulbank\\view\\conversion\\convchoose.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{04E32C90-65C6-4E04-8287-BA386E0EDC77}|Fulbank\\Fulbank.csproj|c:\\users\\micka\\documents\\cours\\projet\\fulbank---rito-dev\\fulbank---rito-dev\\fulbank\\fulbank\\view\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{04E32C90-65C6-4E04-8287-BA386E0EDC77}|Fulbank\\Fulbank.csproj|solutionrelative:fulbank\\view\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04E32C90-65C6-4E04-8287-BA386E0EDC77}|Fulbank\\Fulbank.csproj|c:\\users\\micka\\documents\\cours\\projet\\fulbank---rito-dev\\fulbank---rito-dev\\fulbank\\fulbank\\view\\conversion\\convchoose.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04E32C90-65C6-4E04-8287-BA386E0EDC77}|Fulbank\\Fulbank.csproj|solutionrelative:fulbank\\view\\conversion\\convchoose.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04E32C90-65C6-4E04-8287-BA386E0EDC77}|Fulbank\\Fulbank.csproj|c:\\users\\micka\\documents\\cours\\projet\\fulbank---rito-dev\\fulbank---rito-dev\\fulbank\\fulbank\\view\\conversion\\conversion.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04E32C90-65C6-4E04-8287-BA386E0EDC77}|Fulbank\\Fulbank.csproj|solutionrelative:fulbank\\view\\conversion\\conversion.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04E32C90-65C6-4E04-8287-BA386E0EDC77}|Fulbank\\Fulbank.csproj|C:\\Users\\micka\\Documents\\Cours\\Projet\\FULBANK---Rito-Dev\\FULBANK---Rito-Dev\\Fulbank\\fulbank\\view\\conversion\\convchoose.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{04E32C90-65C6-4E04-8287-BA386E0EDC77}|Fulbank\\Fulbank.csproj|solutionrelative:fulbank\\view\\conversion\\convchoose.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04E32C90-65C6-4E04-8287-BA386E0EDC77}|Fulbank\\Fulbank.csproj|c:\\users\\micka\\documents\\cours\\projet\\fulbank---rito-dev\\fulbank---rito-dev\\fulbank\\fulbank\\view\\conversion\\change.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04E32C90-65C6-4E04-8287-BA386E0EDC77}|Fulbank\\Fulbank.csproj|solutionrelative:fulbank\\view\\conversion\\change.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04E32C90-65C6-4E04-8287-BA386E0EDC77}|Fulbank\\Fulbank.csproj|c:\\users\\micka\\documents\\cours\\projet\\fulbank---rito-dev\\fulbank---rito-dev\\fulbank\\fulbank\\view\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04E32C90-65C6-4E04-8287-BA386E0EDC77}|Fulbank\\Fulbank.csproj|solutionrelative:fulbank\\view\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,70 +58,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "MainForm.cs",
               "DocumentMoniker": "C:\\Users\\micka\\Documents\\Cours\\Projet\\FULBANK---Rito-Dev\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\View\\MainForm.cs",
               "RelativeDocumentMoniker": "Fulbank\\View\\MainForm.cs",
               "ToolTip": "C:\\Users\\micka\\Documents\\Cours\\Projet\\FULBANK---Rito-Dev\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\View\\MainForm.cs",
               "RelativeToolTip": "Fulbank\\View\\MainForm.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAABIAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAwA4AAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T14:40:10.401Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ApiCache.cs",
-              "DocumentMoniker": "C:\\Users\\micka\\Documents\\Cours\\Projet\\FULBANK---Rito-Dev\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\ViewModel\\ApiCache.cs",
-              "RelativeDocumentMoniker": "Fulbank\\ViewModel\\ApiCache.cs",
-              "ToolTip": "C:\\Users\\micka\\Documents\\Cours\\Projet\\FULBANK---Rito-Dev\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\ViewModel\\ApiCache.cs",
-              "RelativeToolTip": "Fulbank\\ViewModel\\ApiCache.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAgwCQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T16:09:57.274Z",
+              "WhenOpened": "2024-12-03T14:40:18.984Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Change.cs",
-              "DocumentMoniker": "C:\\Users\\micka\\Documents\\Cours\\Projet\\FULBANK---Rito-Dev\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\View\\Conversion\\Change.cs",
-              "RelativeDocumentMoniker": "Fulbank\\View\\Conversion\\Change.cs",
-              "ToolTip": "C:\\Users\\micka\\Documents\\Cours\\Projet\\FULBANK---Rito-Dev\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\View\\Conversion\\Change.cs",
-              "RelativeToolTip": "Fulbank\\View\\Conversion\\Change.cs",
-              "ViewState": "AgIAAHwAAAAAAAAAAAAwwJIAAAARAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "ConvChoose.cs",
+              "DocumentMoniker": "C:\\Users\\micka\\Documents\\Cours\\Projet\\FULBANK---Rito-Dev\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\View\\Conversion\\ConvChoose.cs",
+              "RelativeDocumentMoniker": "Fulbank\\View\\Conversion\\ConvChoose.cs",
+              "ToolTip": "C:\\Users\\micka\\Documents\\Cours\\Projet\\FULBANK---Rito-Dev\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\View\\Conversion\\ConvChoose.cs",
+              "RelativeToolTip": "Fulbank\\View\\Conversion\\ConvChoose.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAAwFwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T12:51:28.903Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Conversion.Cs [Conception]",
-              "DocumentMoniker": "C:\\Users\\micka\\Documents\\Cours\\Projet\\FULBANK---Rito-Dev\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\View\\Conversion\\Conversion.Cs",
-              "RelativeDocumentMoniker": "Fulbank\\View\\Conversion\\Conversion.Cs",
-              "ToolTip": "C:\\Users\\micka\\Documents\\Cours\\Projet\\FULBANK---Rito-Dev\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\View\\Conversion\\Conversion.Cs [Conception]",
-              "RelativeToolTip": "Fulbank\\View\\Conversion\\Conversion.Cs [Conception]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T15:19:32.355Z",
-              "EditorCaption": " [Conception]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Conversion.Cs",
-              "DocumentMoniker": "C:\\Users\\micka\\Documents\\Cours\\Projet\\FULBANK---Rito-Dev\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\View\\Conversion\\Conversion.Cs",
-              "RelativeDocumentMoniker": "Fulbank\\View\\Conversion\\Conversion.Cs",
-              "ToolTip": "C:\\Users\\micka\\Documents\\Cours\\Projet\\FULBANK---Rito-Dev\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\View\\Conversion\\Conversion.Cs",
-              "RelativeToolTip": "Fulbank\\View\\Conversion\\Conversion.Cs",
-              "ViewState": "AgIAAE0AAAAAAAAAAAAawHUAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T12:52:03.466Z",
+              "WhenOpened": "2024-11-25T15:18:39.08Z",
               "EditorCaption": ""
             },
             {
@@ -111,6 +97,118 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-18T15:14:28.242Z",
               "EditorCaption": " [Conception]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Conversion.Cs [Conception]",
+              "DocumentMoniker": "C:\\Users\\micka\\Documents\\Cours\\Projet\\FULBANK---Rito-Dev\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\View\\Conversion\\Conversion.Cs",
+              "RelativeDocumentMoniker": "Fulbank\\View\\Conversion\\Conversion.Cs",
+              "ToolTip": "C:\\Users\\micka\\Documents\\Cours\\Projet\\FULBANK---Rito-Dev\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\View\\Conversion\\Conversion.Cs [Conception]",
+              "RelativeToolTip": "Fulbank\\View\\Conversion\\Conversion.Cs [Conception]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T15:19:32.355Z",
+              "EditorCaption": " [Conception]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Conversion.Cs",
+              "DocumentMoniker": "C:\\Users\\micka\\Documents\\Cours\\Projet\\FULBANK---Rito-Dev\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\View\\Conversion\\Conversion.Cs",
+              "RelativeDocumentMoniker": "Fulbank\\View\\Conversion\\Conversion.Cs",
+              "ToolTip": "C:\\Users\\micka\\Documents\\Cours\\Projet\\FULBANK---Rito-Dev\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\View\\Conversion\\Conversion.Cs",
+              "RelativeToolTip": "Fulbank\\View\\Conversion\\Conversion.Cs",
+              "ViewState": "AgIAAI8AAAAAAAAAAAAswKEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T12:52:03.466Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ConvChooseCode.cs",
+              "DocumentMoniker": "C:\\Users\\micka\\Documents\\Cours\\Projet\\FULBANK---Rito-Dev\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\ViewModel\\Conversion\\ConvChooseCode.cs",
+              "RelativeDocumentMoniker": "Fulbank\\ViewModel\\Conversion\\ConvChooseCode.cs",
+              "ToolTip": "C:\\Users\\micka\\Documents\\Cours\\Projet\\FULBANK---Rito-Dev\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\ViewModel\\Conversion\\ConvChooseCode.cs",
+              "RelativeToolTip": "Fulbank\\ViewModel\\Conversion\\ConvChooseCode.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAkwE0AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T15:34:15.162Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ApiCache.cs",
+              "DocumentMoniker": "C:\\Users\\micka\\Documents\\Cours\\Projet\\FULBANK---Rito-Dev\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\ViewModel\\ApiCache.cs",
+              "RelativeDocumentMoniker": "Fulbank\\ViewModel\\ApiCache.cs",
+              "ToolTip": "C:\\Users\\micka\\Documents\\Cours\\Projet\\FULBANK---Rito-Dev\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\ViewModel\\ApiCache.cs",
+              "RelativeToolTip": "Fulbank\\ViewModel\\ApiCache.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAA5wBAAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T09:01:44.119Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ConvChoose.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\micka\\Documents\\Cours\\Projet\\FULBANK---Rito-Dev\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\View\\Conversion\\ConvChoose.Designer.cs",
+              "RelativeDocumentMoniker": "Fulbank\\View\\Conversion\\ConvChoose.Designer.cs",
+              "ToolTip": "C:\\Users\\micka\\Documents\\Cours\\Projet\\FULBANK---Rito-Dev\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\View\\Conversion\\ConvChoose.Designer.cs",
+              "RelativeToolTip": "Fulbank\\View\\Conversion\\ConvChoose.Designer.cs",
+              "ViewState": "AgIAAK0AAAAAAAAAAAAQwMYAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T15:18:53.374Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Conversion.Designer.Cs",
+              "DocumentMoniker": "C:\\Users\\micka\\Documents\\Cours\\Projet\\FULBANK---Rito-Dev\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\View\\Conversion\\Conversion.Designer.Cs",
+              "RelativeDocumentMoniker": "Fulbank\\View\\Conversion\\Conversion.Designer.Cs",
+              "ToolTip": "C:\\Users\\micka\\Documents\\Cours\\Projet\\FULBANK---Rito-Dev\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\View\\Conversion\\Conversion.Designer.Cs",
+              "RelativeToolTip": "Fulbank\\View\\Conversion\\Conversion.Designer.Cs",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAQwHQAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T13:30:28.098Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ConvChoose.cs [Conception]",
+              "DocumentMoniker": "C:\\Users\\micka\\Documents\\Cours\\Projet\\FULBANK---Rito-Dev\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\View\\Conversion\\ConvChoose.cs",
+              "RelativeDocumentMoniker": "Fulbank\\View\\Conversion\\ConvChoose.cs",
+              "ToolTip": "C:\\Users\\micka\\Documents\\Cours\\Projet\\FULBANK---Rito-Dev\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\View\\Conversion\\ConvChoose.cs [Conception]",
+              "RelativeToolTip": "Fulbank\\View\\Conversion\\ConvChoose.cs [Conception]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T15:19:01.285Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "HomePage.cs",
+              "DocumentMoniker": "C:\\Users\\micka\\Documents\\Cours\\Projet\\FULBANK---Rito-Dev\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\View\\HomePage.cs",
+              "RelativeDocumentMoniker": "Fulbank\\View\\HomePage.cs",
+              "ToolTip": "C:\\Users\\micka\\Documents\\Cours\\Projet\\FULBANK---Rito-Dev\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\View\\HomePage.cs",
+              "RelativeToolTip": "Fulbank\\View\\HomePage.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAhwDMAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T08:56:22.489Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Change.cs",
+              "DocumentMoniker": "C:\\Users\\micka\\Documents\\Cours\\Projet\\FULBANK---Rito-Dev\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\View\\Conversion\\Change.cs",
+              "RelativeDocumentMoniker": "Fulbank\\View\\Conversion\\Change.cs",
+              "ToolTip": "C:\\Users\\micka\\Documents\\Cours\\Projet\\FULBANK---Rito-Dev\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\View\\Conversion\\Change.cs",
+              "RelativeToolTip": "Fulbank\\View\\Conversion\\Change.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T08:57:15.094Z"
             }
           ]
         }

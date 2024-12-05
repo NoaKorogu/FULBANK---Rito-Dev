@@ -47,7 +47,9 @@ namespace Fulbank.View
 
         private void Btn_Cancel_Click(object sender, EventArgs e)
         {
-            Conversion conversation = new Conversion();
+            string amountValue = "0";
+            string currencyValue = "eur";
+            Conversion conversation = new Conversion(amountValue, currencyValue);
             conversation.Dock = DockStyle.Fill;
             conversation.TopLevel = false;
             MainForm.MainPanel.Controls.Clear();

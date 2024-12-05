@@ -27,22 +27,24 @@ namespace Fulbank.View
 
         private async Task LoadPricesAsync()
         {
-            // Appeler les API en parallèle
-            var tasks = new[]
+            try
             {
-                ApiCache.GetCryptoPrice("bitcoin", "eur"),
-                ApiCache.GetCryptoPrice("bitcoin", "usd"),
-                ApiCache.GetCryptoPrice("ethereum", "eur"),
-                ApiCache.GetCryptoPrice("ethereum", "usd")
-            };
-
-            var results = await Task.WhenAll(tasks);
-
-            // Assigner les résultats aux variables
-            priceBTCeur = results[0];
-            priceBTCusd = results[1];
-            priceETHeur = results[2];
-            priceETHusd = results[3];
+                priceBTCeur = await ApiCache.GetCryptoPrice("bitcoin", "eur");
+                await Task.Delay(1000); // Délai de 1 seconde
+                priceBTCusd = await ApiCache.GetCryptoPrice("bitcoin", "usd");
+                await Task.Delay(1000); // Délai de 1 seconde
+                priceETHeur = await ApiCache.GetCryptoPrice("ethereum", "eur");
+                await Task.Delay(1000); // Délai de 1 seconde
+                priceETHusd = await ApiCache.GetCryptoPrice("ethereum", "usd");
+            }
+            catch (HttpRequestException httpEx)
+            {
+                MessageBox.Show($"Erreur de requête HTTP : {httpEx.Message}");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erreur : {ex.Message}");
+            }
         }
 
         private void UpdateLabelsBitcoin(decimal userInput, string wanted)
@@ -57,7 +59,6 @@ namespace Fulbank.View
             lbl_TypeL.Text = wanted == "eur" ? "€" : "$";
             lbl_TypeL2.Text = wanted == "eur" ? "€" : "$";
 
-            // Utiliser la valeur entrée par l'utilisateur pour calculer et mettre à jour les labels
             decimal userValue = userInput;
             lbl_FValue.Text = userValue.ToString("0.######");
             decimal convertedValue = userValue * eutobitcoin;
@@ -84,7 +85,10 @@ namespace Fulbank.View
 
         private void Btn_Leave_Click(object sender, EventArgs e)
         {
-            Conversion conversation = new Conversion();
+            string amountValue = "0"; // ou toute autre valeur par défaut
+            string currencyValue = "eur"; // ou toute autre valeur par défaut
+
+            Conversion conversation = new Conversion(amountValue, currencyValue);
             conversation.Dock = DockStyle.Fill;
             conversation.TopLevel = false;
             MainForm.MainPanel.Controls.Clear();
