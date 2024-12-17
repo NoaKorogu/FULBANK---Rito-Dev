@@ -149,11 +149,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Guignolle\\RitoDevs\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\Fulbank.csproj",
+      "projectUniqueName": "C:\\Users\\GUIGNOLLE\\source\\repos\\NoaKorogu\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\Fulbank.csproj",
       "projectName": "Fulbank",
-      "projectPath": "D:\\Guignolle\\RitoDevs\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\Fulbank.csproj",
+      "projectPath": "C:\\Users\\GUIGNOLLE\\source\\repos\\NoaKorogu\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\Fulbank.csproj",
       "packagesPath": "C:\\Users\\GUIGNOLLE\\.nuget\\packages\\",
-      "outputPath": "D:\\Guignolle\\RitoDevs\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\obj\\",
+      "outputPath": "C:\\Users\\GUIGNOLLE\\source\\repos\\NoaKorogu\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
