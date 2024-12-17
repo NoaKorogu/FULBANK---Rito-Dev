@@ -15,6 +15,8 @@ namespace Fulbank.Model
 
         public string Password { get; set; }
 
+        public ICollection<Account> Accounts { get; set; }
+        public ICollection<Operation> Operations { get; set; }
 
         public Users(int id, string TheUsername, string ThePassword) {
 
@@ -22,8 +24,18 @@ namespace Fulbank.Model
             this.Username = TheUsername;
             this.Password = ThePassword;
         }
+        public int getId()
+        {
+            return this.Id;
+        }
+        public string getUsername()
+        {
+            return this.Username;
+        }
 
-
-        
+        public string getPassword()
+        {
+            return this.Password;
+        }
     }
 }
