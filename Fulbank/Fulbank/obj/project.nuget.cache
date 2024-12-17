@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "1qxq/QX+f4g=",
+  "dgSpecHash": "dB83diYWSYw=",
   "success": true,
-  "projectFilePath": "C:\\Users\\micka\\Documents\\Cours\\Projet\\Fulbank\\Fulbank\\Fulbank.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\micka\\Documents\\Cours\\Projet\\FULBANK---Rito-Dev\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\Fulbank.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\micka\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

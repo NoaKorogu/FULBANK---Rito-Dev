@@ -6,7 +6,6 @@
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
@@ -36,6 +35,10 @@
             Btn_Rmv10 = new Button();
             Btn_Rmv100 = new Button();
             Btn_Valid = new Button();
+            Lbl_Amount = new Label();
+            Lbl_Euro = new Label();
+            TxtBx_MoneyAdd = new TextBox();
+            TxtBx_MoneySupp = new TextBox();
             SuspendLayout();
             // 
             // Btn_Add1
@@ -49,8 +52,9 @@
             Btn_Add1.Name = "Btn_Add1";
             Btn_Add1.Size = new Size(250, 100);
             Btn_Add1.TabIndex = 10;
-            Btn_Add1.Text = "Ajout 1 euro";
+            Btn_Add1.Text = "Ajout 1 €/$";
             Btn_Add1.UseVisualStyleBackColor = false;
+            Btn_Add1.Click += Btn_Add1_Click;
             // 
             // Btn_Add10
             // 
@@ -63,8 +67,9 @@
             Btn_Add10.Name = "Btn_Add10";
             Btn_Add10.Size = new Size(250, 100);
             Btn_Add10.TabIndex = 11;
-            Btn_Add10.Text = "Ajout 10 euros";
+            Btn_Add10.Text = "Ajout 10 €/$";
             Btn_Add10.UseVisualStyleBackColor = false;
+            Btn_Add10.Click += Btn_Add10_Click;
             // 
             // Btn_Add100
             // 
@@ -77,8 +82,9 @@
             Btn_Add100.Name = "Btn_Add100";
             Btn_Add100.Size = new Size(250, 100);
             Btn_Add100.TabIndex = 12;
-            Btn_Add100.Text = "Ajout 100 euros";
+            Btn_Add100.Text = "Ajout personnalisé";
             Btn_Add100.UseVisualStyleBackColor = false;
+            Btn_Add100.Click += Btn_Add100_Click;
             // 
             // Btn_Cancel
             // 
@@ -91,7 +97,7 @@
             Btn_Cancel.Name = "Btn_Cancel";
             Btn_Cancel.Size = new Size(250, 100);
             Btn_Cancel.TabIndex = 13;
-            Btn_Cancel.Text = "Annuler";
+            Btn_Cancel.Text = "Passer en crypto";
             Btn_Cancel.UseVisualStyleBackColor = false;
             Btn_Cancel.Click += Btn_Cancel_Click;
             // 
@@ -106,8 +112,9 @@
             Btn_Rmv1.Name = "Btn_Rmv1";
             Btn_Rmv1.Size = new Size(250, 100);
             Btn_Rmv1.TabIndex = 14;
-            Btn_Rmv1.Text = "Enlever 1 euro";
+            Btn_Rmv1.Text = "Enlever 1 €/$";
             Btn_Rmv1.UseVisualStyleBackColor = false;
+            Btn_Rmv1.Click += Btn_Rmv1_Click;
             // 
             // Btn_Rmv10
             // 
@@ -120,8 +127,9 @@
             Btn_Rmv10.Name = "Btn_Rmv10";
             Btn_Rmv10.Size = new Size(250, 100);
             Btn_Rmv10.TabIndex = 15;
-            Btn_Rmv10.Text = "Enlever 10 euro";
+            Btn_Rmv10.Text = "Enlever 10 €/$";
             Btn_Rmv10.UseVisualStyleBackColor = false;
+            Btn_Rmv10.Click += Btn_Rmv10_Click;
             // 
             // Btn_Rmv100
             // 
@@ -134,8 +142,9 @@
             Btn_Rmv100.Name = "Btn_Rmv100";
             Btn_Rmv100.Size = new Size(250, 100);
             Btn_Rmv100.TabIndex = 16;
-            Btn_Rmv100.Text = "Enlever 100 euros";
+            Btn_Rmv100.Text = "Enlevement personnalisé";
             Btn_Rmv100.UseVisualStyleBackColor = false;
+            Btn_Rmv100.Click += Btn_Rmv100_Click;
             // 
             // Btn_Valid
             // 
@@ -152,12 +161,53 @@
             Btn_Valid.UseVisualStyleBackColor = false;
             Btn_Valid.Click += Btn_Valid_Click;
             // 
+            // Lbl_Amount
+            // 
+            Lbl_Amount.AutoSize = true;
+            Lbl_Amount.ForeColor = Color.White;
+            Lbl_Amount.Location = new Point(470, 68);
+            Lbl_Amount.Name = "Lbl_Amount";
+            Lbl_Amount.Size = new Size(57, 36);
+            Lbl_Amount.TabIndex = 18;
+            Lbl_Amount.Text = "0.0";
+            Lbl_Amount.TextAlign = ContentAlignment.BottomCenter;
+            Lbl_Amount.Click += Lbl_Amount_Click;
+            // 
+            // Lbl_Euro
+            // 
+            Lbl_Euro.AutoSize = true;
+            Lbl_Euro.ForeColor = Color.White;
+            Lbl_Euro.Location = new Point(470, 138);
+            Lbl_Euro.Name = "Lbl_Euro";
+            Lbl_Euro.Size = new Size(57, 36);
+            Lbl_Euro.TabIndex = 19;
+            Lbl_Euro.Text = "€/$";
+            Lbl_Euro.TextAlign = ContentAlignment.BottomCenter;
+            // 
+            // TxtBx_MoneyAdd
+            // 
+            TxtBx_MoneyAdd.Location = new Point(268, 405);
+            TxtBx_MoneyAdd.Name = "TxtBx_MoneyAdd";
+            TxtBx_MoneyAdd.Size = new Size(173, 41);
+            TxtBx_MoneyAdd.TabIndex = 20;
+            // 
+            // TxtBx_MoneySupp
+            // 
+            TxtBx_MoneySupp.Location = new Point(583, 405);
+            TxtBx_MoneySupp.Name = "TxtBx_MoneySupp";
+            TxtBx_MoneySupp.Size = new Size(173, 41);
+            TxtBx_MoneySupp.TabIndex = 21;
+            // 
             // ConvChoose
             // 
             AutoScaleDimensions = new SizeF(17F, 36F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(128, 194, 236);
             ClientSize = new Size(1024, 768);
+            Controls.Add(TxtBx_MoneySupp);
+            Controls.Add(TxtBx_MoneyAdd);
+            Controls.Add(Lbl_Euro);
+            Controls.Add(Lbl_Amount);
             Controls.Add(Btn_Valid);
             Controls.Add(Btn_Rmv100);
             Controls.Add(Btn_Rmv10);
@@ -171,7 +221,9 @@
             Margin = new Padding(6, 5, 6, 5);
             Name = "ConvChoose";
             Text = "ConvChoose";
+            Load += ConvChoose_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -184,5 +236,9 @@
         private Button Btn_Rmv10;
         private Button Btn_Rmv100;
         private Button Btn_Valid;
+        private Label Lbl_Amount;
+        private Label Lbl_Euro;
+        private TextBox TxtBx_MoneyAdd;
+        private TextBox TxtBx_MoneySupp;
     }
 }

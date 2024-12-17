@@ -29,9 +29,6 @@ namespace Fulbank.View
             form.Show();
         }
 
-        private void Pnl_Main_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+       
     }
 }
