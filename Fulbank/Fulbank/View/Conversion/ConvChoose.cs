@@ -89,9 +89,6 @@ namespace Fulbank.View
         }
 
 
-
-
-
         private void Lbl_Amount_Click(object sender, EventArgs e)
         {
 
