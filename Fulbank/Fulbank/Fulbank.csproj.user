@@ -28,9 +28,6 @@
     <Compile Update="View\Register.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="View\Deposit.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="View\User\Register.cs">
       <SubType>Form</SubType>
     </Compile>
