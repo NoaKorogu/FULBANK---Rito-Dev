@@ -30,11 +30,10 @@
         {
             Btn_Valid = new Button();
             Btn_Cancel = new Button();
-            dataGridView1 = new DataGridView();
+            dgvTransfer = new DataGridView();
             lbl_username = new Label();
             Txtbox_Search = new TextBox();
-            button1 = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvTransfer).BeginInit();
             SuspendLayout();
             // 
             // Btn_Valid
@@ -67,15 +66,15 @@
             Btn_Cancel.UseVisualStyleBackColor = false;
             Btn_Cancel.Click += Btn_Cancel_Click;
             // 
-            // dataGridView1
+            // dgvTransfer
             // 
-            dataGridView1.BackgroundColor = Color.FromArgb(128, 194, 236);
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(255, 167);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(499, 372);
-            dataGridView1.TabIndex = 23;
+            dgvTransfer.BackgroundColor = Color.FromArgb(128, 194, 236);
+            dgvTransfer.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvTransfer.Location = new Point(255, 167);
+            dgvTransfer.Name = "dgvTransfer";
+            dgvTransfer.RowHeadersWidth = 51;
+            dgvTransfer.Size = new Size(499, 372);
+            dgvTransfer.TabIndex = 23;
             // 
             // lbl_username
             // 
@@ -85,7 +84,7 @@
             lbl_username.Location = new Point(167, 60);
             lbl_username.Name = "lbl_username";
             lbl_username.RightToLeft = RightToLeft.No;
-            lbl_username.Size = new Size(153, 36);
+            lbl_username.Size = new Size(124, 29);
             lbl_username.TabIndex = 26;
             lbl_username.Text = "Chercher :";
             // 
@@ -96,31 +95,19 @@
             Txtbox_Search.ForeColor = Color.White;
             Txtbox_Search.Location = new Point(339, 63);
             Txtbox_Search.Name = "Txtbox_Search";
-            Txtbox_Search.Size = new Size(311, 34);
+            Txtbox_Search.Size = new Size(311, 28);
             Txtbox_Search.TabIndex = 25;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.FromArgb(34, 67, 153);
-            button1.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(706, 60);
-            button1.Name = "button1";
-            button1.Size = new Size(97, 38);
-            button1.TabIndex = 24;
-            button1.Text = "Chercher";
-            button1.UseVisualStyleBackColor = false;
+            Txtbox_Search.TextChanged += Txtbox_Search_TextChanged;
             // 
             // ChooseUser
             // 
-            AutoScaleDimensions = new SizeF(19F, 38F);
+            AutoScaleDimensions = new SizeF(15F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(128, 194, 236);
             ClientSize = new Size(1024, 768);
             Controls.Add(lbl_username);
             Controls.Add(Txtbox_Search);
-            Controls.Add(button1);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvTransfer);
             Controls.Add(Btn_Cancel);
             Controls.Add(Btn_Valid);
             Font = new Font("Microsoft Sans Serif", 19.8000011F);
@@ -128,7 +115,8 @@
             Margin = new Padding(7, 6, 7, 6);
             Name = "ChooseUser";
             Text = "ChooseUser";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += ChooseUser_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvTransfer).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -137,9 +125,8 @@
 
         private Button Btn_Valid;
         private Button Btn_Cancel;
-        private DataGridView dataGridView1;
+        private DataGridView dgvTransfer;
         private Label lbl_username;
         private TextBox Txtbox_Search;
-        private Button button1;
     }
 }

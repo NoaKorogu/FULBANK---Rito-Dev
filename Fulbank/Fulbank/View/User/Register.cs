@@ -59,38 +59,34 @@ namespace Fulbank.View
         private void Btn_Valid_Click(object sender, EventArgs e)
         {
             bool check = false;
-            foreach (Users user in users)
+            if (TxtboxUsername.Text != null && TxtboxPasswrd.Text != null && TxtboxPasswrd.Text == TxtboxPasswrdConfirm.Text)
             {
-                if (TxtboxUsername.Text != null && TxtboxPasswrd.Text != null && TxtboxPasswrd.Text == TxtboxPasswrdConfirm.Text)
+                check = true;
+                try
                 {
-                    check = true;
-                    try
+                    Singleton db = Singleton.Instance;
+                    db.OpenConnection();
+
+                    using (MySqlCommand cmd = new MySqlCommand("INSERT INTO Users(username,`password`) VALUES(@username, @password)", db.Connection))
                     {
-                        Singleton db = Singleton.Instance;
-                        db.OpenConnection();
+                        cmd.Parameters.AddWithValue("@username", TxtboxUsername.Text);
+                        cmd.Parameters.AddWithValue("@password", TxtboxPasswrd.Text);
 
-                        using (MySqlCommand cmd = new MySqlCommand("INSERT INTO Users(id,username,`password`) VALUES(@id, @username, @password)", db.Connection))
-                        {
-                            cmd.Parameters.AddWithValue("@id", user.getId() + 1);
-                            cmd.Parameters.AddWithValue("@username", TxtboxUsername.Text);
-                            cmd.Parameters.AddWithValue("@password", TxtboxPasswrd.Text);
-
-                            cmd.ExecuteNonQuery();
-                        }
-
-                        Welcome form = new Welcome();
-                        form.Dock = DockStyle.Fill;
-                        form.TopLevel = false;
-                        MainForm.MainPanel.Controls.Clear();
-                        MainForm.MainPanel.Controls.Add(form);
-                        form.Show();
-
-                        db.CloseConnection();
+                        cmd.ExecuteNonQuery();
                     }
-                    catch
-                    {
-                        MessageBox.Show("Il y a une erreur dans la création du compte");
-                    }
+
+                    Welcome form = new Welcome();
+                    form.Dock = DockStyle.Fill;
+                    form.TopLevel = false;
+                    MainForm.MainPanel.Controls.Clear();
+                    MainForm.MainPanel.Controls.Add(form);
+                    form.Show();
+
+                 db.CloseConnection();
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show($"Erreur: {ex.Message}");
                 }
             }
             if (check == false)

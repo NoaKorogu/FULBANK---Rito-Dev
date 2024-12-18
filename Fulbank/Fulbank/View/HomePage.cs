@@ -1,6 +1,7 @@
 ﻿using Fulbank.Model;
 using Fulbank.View.Acc;
 using Fulbank.View.transfer;
+using Microsoft.VisualBasic.ApplicationServices;
 using MySqlConnector;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,7 @@ namespace Fulbank.View
 {
     public partial class FormHP : Form
     {
+        int userId = SessionManager.CurrentUser;
         public FormHP()
         {
             InitializeComponent();
@@ -23,9 +25,9 @@ namespace Fulbank.View
 
         private void FormHP_Load(object sender, EventArgs e)
         {
-            loadMoney();
+            loggedUser();
         }
-        private void loadMoney()
+        private void loggedUser()
         {
             try
             {
@@ -33,14 +35,26 @@ namespace Fulbank.View
                 Singleton db = Singleton.Instance;
                 db.OpenConnection();
 
-                using (MySqlCommand cmd = new MySqlCommand("SELECT balance FROM `Account` WHERE idHolder=", db.Connection))
+                using (MySqlCommand cmd = new MySqlCommand("SELECT username FROM Users WHERE id=@userID", db.Connection))
                 {
+                    cmd.Parameters.AddWithValue("@userID", userId);
 
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    foreach (DataRow row in dataTable.Rows)
+                    {
+                        string username = row["username"].ToString();
+
+                        lbl_user.Text = "Connecté en tant que :\n" + username;
+                    }
                 }
+                db.CloseConnection();
             }
-            catch 
-            { 
-
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erreur: {ex.Message}");
             }
         }
         private void Btn_Withdraw_Click(object sender, EventArgs e)
@@ -76,7 +90,12 @@ namespace Fulbank.View
 
         private void Btn_Add_Click(object sender, EventArgs e)
         {
-
+            Deposit deposit = new Deposit();
+            deposit.Dock = DockStyle.Fill;
+            deposit.TopLevel = false;
+            MainForm.MainPanel.Controls.Clear();
+            MainForm.MainPanel.Controls.Add(deposit);
+            deposit.Show();
         }
 
         private void Btn_BAcc_Click(object sender, EventArgs e)

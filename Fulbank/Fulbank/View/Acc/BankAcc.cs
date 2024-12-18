@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Fulbank.Model;
+using MySqlConnector;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,7 @@ namespace Fulbank.View
 {
     public partial class BankAcc : Form
     {
+        int userId = SessionManager.CurrentUser;
         public BankAcc()
         {
             InitializeComponent();
@@ -27,6 +30,38 @@ namespace Fulbank.View
             formhp.Show();
         }
 
+        private void BankAcc_Load(object sender, EventArgs e)
+        {
+            loadMoney();
+        }
+        private void loadMoney()
+        {
+            try
+            {
 
+                Singleton db = Singleton.Instance;
+                db.OpenConnection();
+
+                using (MySqlCommand cmd = new MySqlCommand("SELECT balance FROM `Account` WHERE idHolder=@userID and idCurrency=1", db.Connection))
+                {
+                    cmd.Parameters.AddWithValue("@userID", userId);
+
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    foreach (DataRow row in dataTable.Rows)
+                    {
+                        decimal balance = Convert.ToDecimal(row["balance"]);
+                        lbl_money.Text = $"{balance:F2} €";
+                    }
+                }
+                db.CloseConnection();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erreur: {ex.Message}");
+            }
+        }
     }
 }

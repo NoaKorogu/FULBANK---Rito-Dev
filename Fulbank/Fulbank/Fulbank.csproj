@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Aspose.Words" Version="24.11.1" />
     <PackageReference Include="MySqlConnector" Version="2.3.7" />
   </ItemGroup>
 

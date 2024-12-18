@@ -1,21 +1,25 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Guignolle\\RitoDevs\\FULBANK---Rito-Dev\\Fulbank\\",
+  "WorkspaceRootPath": "D:\\Guignolle\\test\\Fulbank\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{04E32C90-65C6-4E04-8287-BA386E0EDC77}|Fulbank\\Fulbank.csproj|d:\\guignolle\\ritodevs\\fulbank---rito-dev\\fulbank\\fulbank\\view\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{04E32C90-65C6-4E04-8287-BA386E0EDC77}|Fulbank\\Fulbank.csproj|solutionrelative:fulbank\\view\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{04E32C90-65C6-4E04-8287-BA386E0EDC77}|Fulbank\\Fulbank.csproj|d:\\guignolle\\test\\fulbank\\fulbank\\view\\transfer\\amount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04E32C90-65C6-4E04-8287-BA386E0EDC77}|Fulbank\\Fulbank.csproj|solutionrelative:fulbank\\view\\transfer\\amount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{04E32C90-65C6-4E04-8287-BA386E0EDC77}|Fulbank\\Fulbank.csproj|d:\\guignolle\\ritodevs\\fulbank---rito-dev\\fulbank\\fulbank\\view\\user\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{04E32C90-65C6-4E04-8287-BA386E0EDC77}|Fulbank\\Fulbank.csproj|d:\\guignolle\\test\\fulbank\\fulbank\\view\\user\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{04E32C90-65C6-4E04-8287-BA386E0EDC77}|Fulbank\\Fulbank.csproj|solutionrelative:fulbank\\view\\user\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04E32C90-65C6-4E04-8287-BA386E0EDC77}|Fulbank\\Fulbank.csproj|d:\\guignolle\\test\\fulbank\\fulbank\\model\\sessionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04E32C90-65C6-4E04-8287-BA386E0EDC77}|Fulbank\\Fulbank.csproj|solutionrelative:fulbank\\model\\sessionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04E32C90-65C6-4E04-8287-BA386E0EDC77}|Fulbank\\Fulbank.csproj|d:\\guignolle\\test\\fulbank\\fulbank\\view\\user\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{04E32C90-65C6-4E04-8287-BA386E0EDC77}|Fulbank\\Fulbank.csproj|solutionrelative:fulbank\\view\\user\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{04E32C90-65C6-4E04-8287-BA386E0EDC77}|Fulbank\\Fulbank.csproj|d:\\guignolle\\ritodevs\\fulbank---rito-dev\\fulbank\\fulbank\\view\\user\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{04E32C90-65C6-4E04-8287-BA386E0EDC77}|Fulbank\\Fulbank.csproj|solutionrelative:fulbank\\view\\user\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04E32C90-65C6-4E04-8287-BA386E0EDC77}|Fulbank\\Fulbank.csproj|d:\\guignolle\\ritodevs\\fulbank---rito-dev\\fulbank\\fulbank\\view\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{04E32C90-65C6-4E04-8287-BA386E0EDC77}|Fulbank\\Fulbank.csproj|D:\\Guignolle\\test\\Fulbank\\fulbank\\view\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{04E32C90-65C6-4E04-8287-BA386E0EDC77}|Fulbank\\Fulbank.csproj|solutionrelative:fulbank\\view\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -26,58 +30,69 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "HomePage.cs",
-              "DocumentMoniker": "D:\\Guignolle\\RitoDevs\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\View\\HomePage.cs",
-              "RelativeDocumentMoniker": "Fulbank\\View\\HomePage.cs",
-              "ToolTip": "D:\\Guignolle\\RitoDevs\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\View\\HomePage.cs",
-              "RelativeToolTip": "Fulbank\\View\\HomePage.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAABpAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Login.cs",
+              "DocumentMoniker": "D:\\Guignolle\\test\\Fulbank\\Fulbank\\View\\User\\Login.cs",
+              "RelativeDocumentMoniker": "Fulbank\\View\\User\\Login.cs",
+              "ToolTip": "D:\\Guignolle\\test\\Fulbank\\Fulbank\\View\\User\\Login.cs",
+              "RelativeToolTip": "Fulbank\\View\\User\\Login.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowEQAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-15T12:45:27.039Z",
+              "WhenOpened": "2024-12-18T12:30:53.237Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "HomePage.cs [Conception]",
-              "DocumentMoniker": "D:\\Guignolle\\RitoDevs\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\View\\HomePage.cs",
-              "RelativeDocumentMoniker": "Fulbank\\View\\HomePage.cs",
-              "ToolTip": "D:\\Guignolle\\RitoDevs\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\View\\HomePage.cs [Conception]",
-              "RelativeToolTip": "Fulbank\\View\\HomePage.cs [Conception]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-15T12:37:56.136Z",
-              "EditorCaption": " [Conception]"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Register.cs",
-              "DocumentMoniker": "D:\\Guignolle\\RitoDevs\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\View\\User\\Register.cs",
-              "RelativeDocumentMoniker": "Fulbank\\View\\User\\Register.cs",
-              "ToolTip": "D:\\Guignolle\\RitoDevs\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\View\\User\\Register.cs",
-              "RelativeToolTip": "Fulbank\\View\\User\\Register.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAmAAAAAAAAAA==",
+              "Title": "SessionManager.cs",
+              "DocumentMoniker": "D:\\Guignolle\\test\\Fulbank\\Fulbank\\Model\\SessionManager.cs",
+              "RelativeDocumentMoniker": "Fulbank\\Model\\SessionManager.cs",
+              "ToolTip": "D:\\Guignolle\\test\\Fulbank\\Fulbank\\Model\\SessionManager.cs",
+              "RelativeToolTip": "Fulbank\\Model\\SessionManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-07T14:37:46.53Z",
+              "WhenOpened": "2024-12-18T12:17:46.498Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Login.cs",
-              "DocumentMoniker": "D:\\Guignolle\\RitoDevs\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\View\\User\\Login.cs",
-              "RelativeDocumentMoniker": "Fulbank\\View\\User\\Login.cs",
-              "ToolTip": "D:\\Guignolle\\RitoDevs\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\View\\User\\Login.cs",
-              "RelativeToolTip": "Fulbank\\View\\User\\Login.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE4AAAA6AAAAAAAAAA==",
+              "Title": "Register.cs [Conception]",
+              "DocumentMoniker": "D:\\Guignolle\\test\\Fulbank\\Fulbank\\View\\User\\Register.cs",
+              "RelativeDocumentMoniker": "Fulbank\\View\\User\\Register.cs",
+              "ToolTip": "D:\\Guignolle\\test\\Fulbank\\Fulbank\\View\\User\\Register.cs [Conception]",
+              "RelativeToolTip": "Fulbank\\View\\User\\Register.cs [Conception]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-07T13:31:22.188Z",
+              "WhenOpened": "2024-12-17T15:36:21.195Z",
+              "EditorCaption": " [Conception]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "amount.cs",
+              "DocumentMoniker": "D:\\Guignolle\\test\\Fulbank\\Fulbank\\View\\transfer\\amount.cs",
+              "RelativeDocumentMoniker": "Fulbank\\View\\transfer\\amount.cs",
+              "ToolTip": "D:\\Guignolle\\test\\Fulbank\\Fulbank\\View\\transfer\\amount.cs",
+              "RelativeToolTip": "Fulbank\\View\\transfer\\amount.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T14:32:50.196Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HomePage.cs [Conception]",
+              "DocumentMoniker": "D:\\Guignolle\\test\\Fulbank\\Fulbank\\View\\HomePage.cs",
+              "RelativeDocumentMoniker": "Fulbank\\View\\HomePage.cs",
+              "ToolTip": "D:\\Guignolle\\test\\Fulbank\\Fulbank\\View\\HomePage.cs [Conception]",
+              "RelativeToolTip": "Fulbank\\View\\HomePage.cs [Conception]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-15T12:37:56.136Z"
             }
           ]
         }

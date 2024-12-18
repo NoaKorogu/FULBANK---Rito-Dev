@@ -36,6 +36,8 @@
             Btn_Rmv100 = new Button();
             Btn_Rmv10 = new Button();
             Btn_Rmv1 = new Button();
+            Lbl_Beneficiary = new Label();
+            Lbl_Ammount = new Label();
             SuspendLayout();
             // 
             // Btn_Add1
@@ -51,6 +53,7 @@
             Btn_Add1.TabIndex = 10;
             Btn_Add1.Text = "Ajout 1 euro";
             Btn_Add1.UseVisualStyleBackColor = false;
+            Btn_Add1.Click += Btn_Add1_Click;
             // 
             // Btn_Add10
             // 
@@ -65,6 +68,7 @@
             Btn_Add10.TabIndex = 11;
             Btn_Add10.Text = "Ajout 10 euros";
             Btn_Add10.UseVisualStyleBackColor = false;
+            Btn_Add10.Click += Btn_Add10_Click;
             // 
             // Btn_Add100
             // 
@@ -79,6 +83,7 @@
             Btn_Add100.TabIndex = 12;
             Btn_Add100.Text = "Ajout 100 euros";
             Btn_Add100.UseVisualStyleBackColor = false;
+            Btn_Add100.Click += Btn_Add100_Click;
             // 
             // Btn_Cancel
             // 
@@ -123,6 +128,7 @@
             Btn_Rmv100.TabIndex = 19;
             Btn_Rmv100.Text = "Enlever 100 euros";
             Btn_Rmv100.UseVisualStyleBackColor = false;
+            Btn_Rmv100.Click += Btn_Rmv100_Click;
             // 
             // Btn_Rmv10
             // 
@@ -137,6 +143,7 @@
             Btn_Rmv10.TabIndex = 18;
             Btn_Rmv10.Text = "Enlever 10 euro";
             Btn_Rmv10.UseVisualStyleBackColor = false;
+            Btn_Rmv10.Click += Btn_Rmv10_Click;
             // 
             // Btn_Rmv1
             // 
@@ -151,13 +158,34 @@
             Btn_Rmv1.TabIndex = 17;
             Btn_Rmv1.Text = "Enlever 1 euro";
             Btn_Rmv1.UseVisualStyleBackColor = false;
+            Btn_Rmv1.Click += Btn_Rmv1_Click;
+            // 
+            // Lbl_Beneficiary
+            // 
+            Lbl_Beneficiary.AutoSize = true;
+            Lbl_Beneficiary.Location = new Point(419, 70);
+            Lbl_Beneficiary.Name = "Lbl_Beneficiary";
+            Lbl_Beneficiary.Size = new Size(149, 31);
+            Lbl_Beneficiary.TabIndex = 21;
+            Lbl_Beneficiary.Text = "Beneficiary";
+            // 
+            // Lbl_Ammount
+            // 
+            Lbl_Ammount.AutoSize = true;
+            Lbl_Ammount.Location = new Point(442, 326);
+            Lbl_Ammount.Name = "Lbl_Ammount";
+            Lbl_Ammount.Size = new Size(97, 31);
+            Lbl_Ammount.TabIndex = 22;
+            Lbl_Ammount.Text = "000,00";
             // 
             // amount
             // 
-            AutoScaleDimensions = new SizeF(19F, 38F);
+            AutoScaleDimensions = new SizeF(15F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(128, 194, 236);
             ClientSize = new Size(1024, 768);
+            Controls.Add(Lbl_Ammount);
+            Controls.Add(Lbl_Beneficiary);
             Controls.Add(Btn_Valid);
             Controls.Add(Btn_Rmv100);
             Controls.Add(Btn_Rmv10);
@@ -171,7 +199,9 @@
             Margin = new Padding(7, 6, 7, 6);
             Name = "amount";
             Text = "amount";
+            Load += amount_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -184,5 +214,7 @@
         private Button Btn_Rmv100;
         private Button Btn_Rmv10;
         private Button Btn_Rmv1;
+        private Label Lbl_Beneficiary;
+        private Label Lbl_Ammount;
     }
 }

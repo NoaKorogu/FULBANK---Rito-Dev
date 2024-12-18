@@ -9,5 +9,6 @@ namespace Fulbank.Model
     internal class SessionManager
     {
         public static int CurrentUser { get; set; }
+        public static string CurrentUserName { get; set; }
     }
 }

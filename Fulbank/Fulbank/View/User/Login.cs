@@ -17,6 +17,7 @@ namespace Fulbank.View
             Btn_Cancel.FlatStyle = FlatStyle.Flat;
             Btn_Cancel.FlatAppearance.BorderSize = 0;
 
+
             users = new List<Users>(); // Initialize the list
         }
 
@@ -64,6 +65,8 @@ namespace Fulbank.View
             {
                 if (TxtboxUsername.Text != null && TxtboxUsername.Text == user.getUsername() && TxtboxPasswrd != null && TxtboxPasswrd.Text == user.getPassword())
                 {
+                    SessionManager.CurrentUser = user.Id;
+                    SessionManager.CurrentUserName = user.Username;
                     check = true;
                     FormHP form = new FormHP();
                     form.Dock = DockStyle.Fill;
