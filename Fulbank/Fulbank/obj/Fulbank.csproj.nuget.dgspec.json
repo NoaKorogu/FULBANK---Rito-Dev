@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\GUIGNOLLE\\source\\repos\\NoaKorogu\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\Fulbank.csproj": {}
+    "D:\\Guignolle\\test\\Fulbank\\Fulbank\\Fulbank.csproj": {}
   },
   "projects": {
-    "C:\\Users\\GUIGNOLLE\\source\\repos\\NoaKorogu\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\Fulbank.csproj": {
+    "D:\\Guignolle\\test\\Fulbank\\Fulbank\\Fulbank.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\GUIGNOLLE\\source\\repos\\NoaKorogu\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\Fulbank.csproj",
+        "projectUniqueName": "D:\\Guignolle\\test\\Fulbank\\Fulbank\\Fulbank.csproj",
         "projectName": "Fulbank",
-        "projectPath": "C:\\Users\\GUIGNOLLE\\source\\repos\\NoaKorogu\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\Fulbank.csproj",
+        "projectPath": "D:\\Guignolle\\test\\Fulbank\\Fulbank\\Fulbank.csproj",
         "packagesPath": "C:\\Users\\GUIGNOLLE\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\GUIGNOLLE\\source\\repos\\NoaKorogu\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\obj\\",
+        "outputPath": "D:\\Guignolle\\test\\Fulbank\\Fulbank\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -50,9 +50,21 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "dependencies": {
+            "Aspose.Words": {
+              "target": "Package",
+              "version": "[24.12.0, )"
+            },
             "MySqlConnector": {
               "target": "Package",
-              "version": "[2.3.7, )"
+              "version": "[2.4.0, )"
+            },
+            "QuestPDF": {
+              "target": "Package",
+              "version": "[2024.12.1, )"
+            },
+            "ini-parser": {
+              "target": "Package",
+              "version": "[2.5.2, )"
             }
           },
           "imports": [

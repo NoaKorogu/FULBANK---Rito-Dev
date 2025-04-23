@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using IniParser;
+using IniParser.Model;  
 
 namespace Fulbank.Model
 {
@@ -15,7 +17,29 @@ namespace Fulbank.Model
 
         private Singleton()
         {
-            string connectionString = "Server=172.16.119.101; Database=Fulbank; Uid=admin; Pwd=MDPadminTEST;";
+            // Configuration file path
+            string projectDirectory = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent?.Parent?.Parent?.FullName;
+            string configPath = Path.Combine(projectDirectory, "Params", "config.ini");
+
+            //Check if the config file exists
+            if (!File.Exists(configPath))
+            {
+                throw new FileNotFoundException("Fichier de configuration introuvable.", configPath);
+            }
+
+            //ini file parser
+            var parser = new FileIniDataParser();
+            IniData configData = parser.ReadFile(configPath);
+
+            //DataBase params
+            string server = configData["MYSQL"]["Host"];
+            string database = configData["MYSQL"]["DataBase"];
+            string user = configData["MYSQL"]["User"];
+            string pwd = configData["MYSQL"]["Password"];
+
+            string connectionString = $"Server={server};Database={database};Uid={user}; Pwd={pwd};";
+
+
             connection = new MySqlConnection(connectionString);
         }
 
