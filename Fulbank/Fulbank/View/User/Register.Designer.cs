@@ -163,7 +163,6 @@
             Btn_Hide.TabIndex = 18;
             Btn_Hide.Text = "Caché / Visible";
             Btn_Hide.UseVisualStyleBackColor = false;
-            Btn_Hide.Click += Btn_Hide_Click;
             // 
             // Lbl_Care
             // 

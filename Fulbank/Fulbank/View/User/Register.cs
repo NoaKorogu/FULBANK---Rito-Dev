@@ -10,6 +10,8 @@ namespace Fulbank.View
         public Register()
         {
             InitializeComponent();
+            TxtboxPasswrd.PasswordChar = '*';
+            TxtboxPasswrdRe.PasswordChar = '*';
             users = new List<Users>();
         }
         private void Register_Load(object sender, EventArgs e)
@@ -61,7 +63,7 @@ namespace Fulbank.View
             bool check = false;
             foreach (Users user in users)
             {
-                if (TxtboxUsername.Text != null && TxtboxPasswrd.Text != null && TxtboxPasswrd.Text == TxtboxPasswrdConfirm.Text)
+                if (TxtboxUsername.Text != null && TxtboxPasswrd.Text != null && TxtboxPasswrd.Text == TxtboxPasswrdRe.Text)
                 {
                     check = true;
                     try
@@ -97,7 +99,7 @@ namespace Fulbank.View
             {
                 MessageBox.Show("Il y a une erreur dans la création du compte");
                 TxtboxPasswrd.Clear();
-                TxtboxPasswrdConfirm.Clear();
+                TxtboxPasswrdRe.Clear();
             }
             
         }

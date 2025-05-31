@@ -1,5 +1,8 @@
-﻿using Fulbank.ViewModel;
+﻿using Fulbank.Model;
+using Fulbank.ViewModel;
+using Fulbank.ViewModel.Conversion;
 using Microsoft.VisualBasic;
+using MySqlConnector;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -67,8 +70,8 @@ namespace Fulbank.View
             // Vérifiez la valeur d'entrée
             if (userInput <= 0)
             {
-                MessageBox.Show("Erreur : La valeur d'entrée doit être supérieure à zéro.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+        Lbl_M2.Text = "0";
+        return;
             }
 
             // Déterminer le prix selon la devise
@@ -350,6 +353,87 @@ namespace Fulbank.View
         private void LogLabels() //Pour des logs temporaires
         {
             MessageBox.Show($"Lbl_Type1: {Lbl_Type1.Text}, Lbl_Type2: {Lbl_Type2.Text}", "Debug Info");
+        }
+
+        private void Btn_Valid_Click(object sender, EventArgs e)
+        {
+            if (!decimal.TryParse(Lbl_M1.Text, out decimal amountToConvert) || amountToConvert <= 0)
+            {
+                MessageBox.Show("Montant invalide.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Déterminer la devise source et cible
+            string currencyFrom = Lbl_Type1.Text switch
+            {
+                "€" => "eur",
+                "$" => "usd",
+                "BTC" => "btc",
+                "ETH" => "eth",
+                _ => null
+            };
+            string currencyTo = Lbl_Type2.Text switch
+            {
+                "€" => "eur",
+                "$" => "usd",
+                "BTC" => "btc",
+                "ETH" => "eth",
+                _ => null
+            };
+
+            if (currencyFrom == null || currencyTo == null)
+            {
+                MessageBox.Show("Devise inconnue.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            decimal userBalance = UserAccount.GetBalance(currencyFrom);
+
+            if (userBalance < amountToConvert)
+            {
+                MessageBox.Show("Solde insuffisant pour effectuer la conversion.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Récupérer le montant converti affiché
+            if (!decimal.TryParse(Lbl_M2.Text, out decimal convertedAmount) || convertedAmount <= 0)
+            {
+                MessageBox.Show("Montant converti invalide.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Effectuer la conversion en base de données
+            try
+            {
+                int userId = SessionManager.CurrentUser;
+                int idCurrencyFrom = UserAccount.GetCurrencyId(currencyFrom);
+                int idCurrencyTo = UserAccount.GetCurrencyId(currencyTo);
+
+                Singleton db = Singleton.Instance;
+                db.OpenConnection();
+
+                using (MySqlCommand cmd = new MySqlCommand(
+                    "START TRANSACTION;" +
+                    "UPDATE Account SET balance = balance - @amountFrom WHERE idHolder = @userId AND idCurrency = @idCurrencyFrom;" +
+                    "UPDATE Account SET balance = balance + @amountTo WHERE idHolder = @userId AND idCurrency = @idCurrencyTo;" +
+                    "COMMIT;", db.Connection))
+                {
+                    cmd.Parameters.AddWithValue("@amountFrom", amountToConvert);
+                    cmd.Parameters.AddWithValue("@amountTo", convertedAmount);
+                    cmd.Parameters.AddWithValue("@userId", userId);
+                    cmd.Parameters.AddWithValue("@idCurrencyFrom", idCurrencyFrom);
+                    cmd.Parameters.AddWithValue("@idCurrencyTo", idCurrencyTo);
+
+                    cmd.ExecuteNonQuery();
+                }
+                db.CloseConnection();
+
+                MessageBox.Show("Conversion effectuée avec succès !", "Succès", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erreur lors de la conversion : {ex.Message}", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

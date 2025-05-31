@@ -127,7 +127,6 @@
             TxtboxPasswrd.Name = "TxtboxPasswrd";
             TxtboxPasswrd.Size = new Size(349, 34);
             TxtboxPasswrd.TabIndex = 6;
-            TxtboxPasswrd.TextChanged += TxtboxPasswrd_TextChanged;
             // 
             // Btn_Hide
             // 

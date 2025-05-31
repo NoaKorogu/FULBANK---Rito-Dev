@@ -1,4 +1,4 @@
-using MySqlConnector;
+﻿using MySqlConnector;
 using Fulbank.Model;
 using System.Data;
 
@@ -16,6 +16,7 @@ namespace Fulbank.View
             Btn_Valid.FlatAppearance.BorderSize = 0;
             Btn_Cancel.FlatStyle = FlatStyle.Flat;
             Btn_Cancel.FlatAppearance.BorderSize = 0;
+            TxtboxPasswrd.PasswordChar = '*';
 
             users = new List<Users>(); // Initialize the list
         }
@@ -56,7 +57,7 @@ namespace Fulbank.View
             }
         }
 
-        
+
         private void btn_valid_Click(object sender, EventArgs e)
         {
             bool check = false;
@@ -64,6 +65,8 @@ namespace Fulbank.View
             {
                 if (TxtboxUsername.Text != null && TxtboxUsername.Text == user.getUsername() && TxtboxPasswrd != null && TxtboxPasswrd.Text == user.getPassword())
                 {
+                    SessionManager.CurrentUser = user.Id;
+                    SessionManager.CurrentUserName = user.Username;
                     check = true;
                     FormHP form = new FormHP();
                     form.Dock = DockStyle.Fill;
@@ -81,7 +84,7 @@ namespace Fulbank.View
             }
 
         }
-        
+
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -111,6 +114,19 @@ namespace Fulbank.View
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+        private void Btn_Hide_Click(object sender, EventArgs e)
+        {
+            if (TxtboxPasswrd.PasswordChar == '*')
+            {
+                Lbl_Care.Text = "Attention le mode visible est activ� !";
+                TxtboxPasswrd.PasswordChar = '\0';
+            }
+            else
+            {
+                Lbl_Care.Text = " ";
+                TxtboxPasswrd.PasswordChar = '*';
+            }
         }
     }
 }

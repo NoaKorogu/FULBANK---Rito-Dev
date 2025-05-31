@@ -1,4 +1,4 @@
-using MySql.Data.MySqlClient;
+using MySqlConnector;
 using System;
 
 public sealed class DatabaseConnection
@@ -7,7 +7,7 @@ public sealed class DatabaseConnection
     private MySqlConnection connection;
 
     // Chaîne de connexion à adapter selon vos besoins
-    private string connectionString = "Server=172.16.119.101;Database=Fulbank;UID=admin;Password=MDPadminTEST;";
+    private string connectionString = "Server=192.168.56.11; Port=25667;Database=Fulbank; UID=User1; Password=Kanek0Ma4ri4BDDTrnmtWeb;";
 
     // Constructeur privé pour empêcher l'instanciation à l'extérieur
     private DatabaseConnection()

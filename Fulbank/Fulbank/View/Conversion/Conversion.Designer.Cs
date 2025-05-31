@@ -70,6 +70,7 @@
             Btn_Valid.TabIndex = 4;
             Btn_Valid.Text = "Valider";
             Btn_Valid.UseVisualStyleBackColor = false;
+            Btn_Valid.Click += Btn_Valid_Click;
             // 
             // Btn_Tx
             // 

@@ -15,7 +15,7 @@ namespace Fulbank.Model
 
         private Singleton()
         {
-            string connectionString = "Server=172.16.119.101; Database=Fulbank; Uid=admin; Pwd=MDPadminTEST;";
+            string connectionString = "Server=192.168.56.11; Port=25667;Database=Fulbank; UID=User1; Password=Kanek0Ma4ri4BDDTrnmtWeb;";
             connection = new MySqlConnection(connectionString);
         }
 

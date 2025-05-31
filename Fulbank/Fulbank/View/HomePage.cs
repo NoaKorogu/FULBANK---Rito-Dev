@@ -1,5 +1,7 @@
-﻿using Fulbank.View.Acc;
+﻿using Fulbank.Model;
+using Fulbank.View.Acc;
 using Fulbank.View.transfer;
+using MySqlConnector;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +16,7 @@ namespace Fulbank.View
 {
     public partial class FormHP : Form
     {
+        int userId = SessionManager.CurrentUser;
         public FormHP()
         {
             InitializeComponent();
@@ -21,7 +24,37 @@ namespace Fulbank.View
 
         private void FormHP_Load(object sender, EventArgs e)
         {
+            loggedUser();
+        }
+        private void loggedUser()
+        {
+            try
+            {
 
+                Singleton db = Singleton.Instance;
+                db.OpenConnection();
+
+                using (MySqlCommand cmd = new MySqlCommand("SELECT username FROM Users WHERE id=@userID", db.Connection))
+                {
+                    cmd.Parameters.AddWithValue("@userID", userId);
+
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    foreach (DataRow row in dataTable.Rows)
+                    {
+                        string username = row["username"].ToString();
+
+                        Lbl_user.Text = "Connecté en tant que :\n" + username;
+                    }
+                }
+                db.CloseConnection();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erreur: {ex.Message}");
+            }
         }
 
         private void Btn_Withdraw_Click(object sender, EventArgs e)
@@ -45,7 +78,10 @@ namespace Fulbank.View
 
         }
 
-        private void Btn_Cancel_Click(object sender, EventArgs e)
+        /**
+         * Display the new "conversion" page with 2 default values (0 and eur) while clearing the actual page
+         */
+        private void Btn_Conv_Click(object sender, EventArgs e)
         {
             string amountValue = "0";
             string currencyValue = "eur";
@@ -90,6 +126,18 @@ namespace Fulbank.View
             MainForm.MainPanel.Controls.Clear();
             MainForm.MainPanel.Controls.Add(paymentTransfer);
             paymentTransfer.Show();
+        }
+
+        private void Btn_Conv_Click_1(object sender, EventArgs e)
+        {
+            string amountValue = "0";
+            string currencyValue = "eur";
+            Conversion conversation = new Conversion(amountValue, currencyValue);
+            conversation.Dock = DockStyle.Fill;
+            conversation.TopLevel = false;
+            MainForm.MainPanel.Controls.Clear();
+            MainForm.MainPanel.Controls.Add(conversation);
+            conversation.Show();
         }
     }
 }

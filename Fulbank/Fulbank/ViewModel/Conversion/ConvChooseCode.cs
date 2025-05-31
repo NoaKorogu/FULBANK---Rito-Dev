@@ -11,9 +11,9 @@ namespace Fulbank.ViewModel.Conversion
 {
     internal class ConvChooseCode
     {
-        private ConvChoose _form;
+        private IConvChoose _form;
 
-        public ConvChooseCode(ConvChoose form)
+        public ConvChooseCode(IConvChoose form)
         {
             _form = form;
 

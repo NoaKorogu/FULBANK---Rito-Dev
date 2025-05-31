@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             Btn_Leave = new Button();
+            lbl_money = new Label();
             SuspendLayout();
             // 
             // Btn_Leave
@@ -44,7 +45,18 @@
             Btn_Leave.TabIndex = 2;
             Btn_Leave.Text = "Quitter";
             Btn_Leave.UseVisualStyleBackColor = false;
-            Btn_Leave.Click += this.Btn_Leave_Click;
+            Btn_Leave.Click += Btn_Leave_Click;
+            // 
+            // lbl_money
+            // 
+            lbl_money.AutoSize = true;
+            lbl_money.Font = new Font("Microsoft Sans Serif", 72F);
+            lbl_money.ForeColor = Color.White;
+            lbl_money.Location = new Point(318, 111);
+            lbl_money.Name = "lbl_money";
+            lbl_money.Size = new Size(390, 135);
+            lbl_money.TabIndex = 3;
+            lbl_money.Text = "0,00 €";
             // 
             // BankAcc
             // 
@@ -52,15 +64,19 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(128, 194, 236);
             ClientSize = new Size(1024, 768);
+            Controls.Add(lbl_money);
             Controls.Add(Btn_Leave);
             FormBorderStyle = FormBorderStyle.None;
             Name = "BankAcc";
             Text = "BankAcc";
+            Load += BankAcc_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private Button Btn_Leave;
+        private Label lbl_money;
     }
 }

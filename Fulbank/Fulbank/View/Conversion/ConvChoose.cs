@@ -12,7 +12,7 @@ using Fulbank.ViewModel.Conversion;
 
 namespace Fulbank.View
 {
-    public partial class ConvChoose : Form
+    public partial class ConvChoose : Form, IConvChoose
     {
         public ConvChoose()
         {
@@ -20,7 +20,7 @@ namespace Fulbank.View
             Lbl_AmountControl = new Label();
             Lbl_AmountControl.Text = "0";
         }
-        public Label Lbl_AmountControl { get; set; }
+        public virtual Label Lbl_AmountControl { get; set; }
 
         private void Btn_Cancel_Click(object sender, EventArgs e)
         {

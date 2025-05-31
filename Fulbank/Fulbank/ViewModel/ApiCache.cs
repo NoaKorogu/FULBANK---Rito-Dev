@@ -29,6 +29,12 @@ public static class ApiCache
         using (HttpClient client = new HttpClient())
         {
             HttpResponseMessage response = await client.GetAsync(url);
+
+            if ((int)response.StatusCode == 429)
+            {
+                throw new Exception("Trop de requêtes envoyées à l'API CoinGecko. Merci de patienter quelques instants.");
+            }
+
             response.EnsureSuccessStatusCode();
 
             string responseBody = await response.Content.ReadAsStringAsync();
@@ -43,4 +49,5 @@ public static class ApiCache
             return price;
         }
     }
+
 }

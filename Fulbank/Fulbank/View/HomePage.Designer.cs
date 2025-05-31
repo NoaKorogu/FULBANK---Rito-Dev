@@ -36,7 +36,7 @@
             Btn_Withdraw = new Button();
             Btn_Payment = new Button();
             Btn_BAcc = new Button();
-            Lbl_Hello = new Label();
+            Lbl_user = new Label();
             Lbl_Pseudo = new Label();
             SuspendLayout();
             // 
@@ -111,7 +111,7 @@
             Btn_Conv.TabIndex = 5;
             Btn_Conv.Text = "Conversion";
             Btn_Conv.UseVisualStyleBackColor = false;
-            Btn_Conv.Click += Btn_Cancel_Click;
+            Btn_Conv.Click += Btn_Conv_Click_1;
             // 
             // Btn_Withdraw
             // 
@@ -158,16 +158,16 @@
             Btn_BAcc.UseVisualStyleBackColor = false;
             Btn_BAcc.Click += Btn_BAcc_Click;
             // 
-            // Lbl_Hello
+            // Lbl_user
             // 
-            Lbl_Hello.AutoSize = true;
-            Lbl_Hello.Font = new Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Lbl_Hello.ForeColor = Color.White;
-            Lbl_Hello.Location = new Point(465, 66);
-            Lbl_Hello.Name = "Lbl_Hello";
-            Lbl_Hello.Size = new Size(95, 39);
-            Lbl_Hello.TabIndex = 9;
-            Lbl_Hello.Text = "Salut";
+            Lbl_user.AutoSize = true;
+            Lbl_user.Font = new Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Lbl_user.ForeColor = Color.White;
+            Lbl_user.Location = new Point(370, 66);
+            Lbl_user.Name = "Lbl_user";
+            Lbl_user.Size = new Size(95, 39);
+            Lbl_user.TabIndex = 9;
+            Lbl_user.Text = "Salut";
             // 
             // Lbl_Pseudo
             // 
@@ -186,7 +186,7 @@
             BackColor = Color.FromArgb(128, 194, 236);
             ClientSize = new Size(1024, 768);
             Controls.Add(Lbl_Pseudo);
-            Controls.Add(Lbl_Hello);
+            Controls.Add(Lbl_user);
             Controls.Add(Btn_BAcc);
             Controls.Add(Btn_Payment);
             Controls.Add(Btn_Withdraw);
@@ -213,7 +213,7 @@
         private Button Btn_Withdraw;
         private Button Btn_Payment;
         private Button Btn_BAcc;
-        private Label Lbl_Hello;
+        private Label Lbl_user;
         private Label Lbl_Pseudo;
     }
 }
