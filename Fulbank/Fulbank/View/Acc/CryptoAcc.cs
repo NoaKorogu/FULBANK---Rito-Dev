@@ -30,6 +30,11 @@ namespace Fulbank.View.Acc
             formhp.Show();
         }
 
+        private void Lbl_Crypto_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void CryptoAcc_Load(object sender, EventArgs e)
         {
             loadMoney();

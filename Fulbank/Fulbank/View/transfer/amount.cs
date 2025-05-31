@@ -1,6 +1,9 @@
 ﻿using Fulbank.Model;
 using MySqlConnector;
-using Aspose.Words;
+using QuestPDF;
+using QuestPDF.Fluent;
+using QuestPDF.Helpers;
+using QuestPDF.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,7 +14,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
-using Aspose.Words.Replacing;
 
 namespace Fulbank.View.transfer
 {
@@ -57,7 +59,7 @@ namespace Fulbank.View.transfer
                     }
                     db.CloseConnection();
 
-                    //GenerateTransferReceipt();
+                    GenerateTransferReceipt();
 
                     FormHP formHP = new FormHP();
                     formHP.Dock = DockStyle.Fill;
@@ -228,87 +230,103 @@ namespace Fulbank.View.transfer
             }
         }
 
-        //private void GenerateTransferReceipt()
-        //{
-        //    try
-        //    {
-        //        // Charger le modèle Word
-        //        string templatePath = "D:/Guignolle/RitoDevs/Fulbank/FulbankRecu.docx";
-        //        Document doc = new Document(templatePath);
+        private void GenerateTransferReceipt()
+        {
+            try
+            {
 
-        //        // Remplir les champs du reçu avec les informations de la transaction
-        //        doc.Range.Replace("{Action}", "Virement", new FindReplaceOptions());
-        //        doc.Range.Replace("{Date}", DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss"), new FindReplaceOptions());
-        //        doc.Range.Replace("{Montant}", ammount.ToString() + " €", new FindReplaceOptions());
-        //        doc.Range.Replace("{Debiteur}", Sender, new FindReplaceOptions());
-        //        doc.Range.Replace("{IDUser}", beneficiary_name, new FindReplaceOptions());
-
-        //        // Sauvegarder temporairement le reçu
-        //        string outputPath = $"D:/Guignolle/RitoDevs/Fulbank/Recus/Recu_{DateTime.Now:ddMMyyyy_HHmmss}.pdf";
-        //        doc.Save(outputPath, SaveFormat.Pdf);
-
-        //        // Afficher un aperçu et demander confirmation
-        //        string previewMessage = $"Prévisualisation du Reçu :\n\n" +
-        //                $"----------------------------\n" +
-        //                $"   Fulbank\n" +
-        //                $"----------------------------\n" +
-        //                $"  Action : Virement\n" +
-        //                $"  Date : {DateTime.Now:dd/MM/yyyy HH:mm:ss}\n\n" +
-        //                $"  Montant : {ammount} €\n" +
-        //                $"-----------------------------\n" +
-        //                $"  Débiteur : {Sender} \n" +
-        //                $"  Bénéficiaire : {beneficiary_name}\n" +
-        //                $"----------------------------\n\n" +
-        //                "Voulez-vous imprimer ce reçu ?";
-
-        //        var result = MessageBox.Show(previewMessage, "Confirmation d'impression", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-        //        if (result == DialogResult.Yes)
-        //        {
-        //            PrintReceipt(outputPath);
-        //            MessageBox.Show("Le reçu a été imprimé avec succès.", "Succès", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //        }
-        //        else
-        //        {
-        //            MessageBox.Show("Impression annulée.", "Annulé", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show($"Erreur lors de la génération du reçu : {ex.Message}");
-        //    }
-        //}
+                // Définir les informations du reçu
+                string action = "Virement";
+                string date = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
+                string montant = ammount.ToString() + " €";
+                string debiteur = Sender;
+                string beneficiaire = beneficiary_name;
 
 
-        //private void PrintReceipt(string documentPath)
-        //{
-        //    try
-        //    {
-        //        // Chemin du fichier PDF temporaire
-        //        string pdfPath = Path.ChangeExtension(documentPath, ".pdf");
+                // Générer le fichier PDF avec QuestPDF
+                string outputPath = $"D:/Guignolle/RitoDevs/Fulbank/Recus/Recu_{DateTime.Now:ddMMyyyy_HHmmss}.pdf";
 
-        //        // Convertir le fichier Word en PDF
-        //        Document doc = new Document(documentPath);
-        //        doc.Save(pdfPath);
+                var document = Document.Create(container =>
+                {
+                    container.Page(page =>
+                    {
+                        page.Size(PageSizes.A4);
+                        page.Margin(2, Unit.Centimetre);
+                        page.DefaultTextStyle(x => x.FontSize(12).FontColor(Colors.Black));
 
-        //        // Utiliser un processus Windows pour imprimer le fichier PDF
-        //        Process printProcess = new Process();
-        //        printProcess.StartInfo.FileName = pdfPath;
-        //        printProcess.StartInfo.Verb = "Print"; // Commande pour imprimer
-        //        printProcess.StartInfo.CreateNoWindow = true;
-        //        printProcess.StartInfo.UseShellExecute = true;
+                        page.Content()
+                            .Column(column =>
+                            {
+                                column.Item().Text("Fulbank").FontSize(18).Bold().AlignCenter();
+                                column.Item().Text("----------------------------").AlignCenter();
+                                column.Item().Text($"Action : {action}").FontSize(14);
+                                column.Item().Text($"Date : {date}").FontSize(14);
 
-        //        printProcess.Start();
-        //        printProcess.WaitForExit();
+                                column.Item().Text($"Montant : {montant}").FontSize(14).Bold();
+                                column.Item().PaddingVertical(10).Text("----------------------------");
 
-        //        // Optionnel : supprimer le fichier PDF après impression
-        //        File.Delete(pdfPath);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show($"Erreur lors de l'impression : {ex.Message}");
-        //    }
-        //}
+                                column.Item().Text($"Débiteur : {debiteur}").FontSize(14);
+                                column.Item().Text($"Bénéficiaire : {beneficiaire}").FontSize(14);
+                                column.Item().Text("----------------------------").AlignCenter();
+                            });
+                    });
+                });
 
+                // Enregistrer le PDF ACTUELLEMENT ne fonctionne pas
+                document.GeneratePdf(outputPath);
+                MessageBox.Show("PDF enregistré avec succès");
+
+                // Afficher un aperçu et demander confirmation
+                string previewMessage = $"Prévisualisation du Reçu :\n\n" +
+                        $"----------------------------\n" +
+                        $"   Fulbank\n" +
+                        $"----------------------------\n" +
+                        $"  Action : {action}\n" +
+                        $"  Date : {date}\n\n" +
+                        $"  Montant : {montant}\n" +
+                        $"-----------------------------\n" +
+                        $"  Débiteur : {debiteur}\n" +
+                        $"  Bénéficiaire : {beneficiaire}\n" +
+                        $"----------------------------\n\n" +
+                        "Voulez-vous imprimer ce reçu ?";
+
+                var result = MessageBox.Show(previewMessage, "Confirmation d'impression", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    PrintReceipt(outputPath);
+                    MessageBox.Show("Le reçu a été imprimé avec succès.", "Succès", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Impression annulée.", "Annulé", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erreur lors de la génération du reçu : {ex.Message}\n{ex.StackTrace}");
+            }
+        }
+
+
+        private void PrintReceipt(string documentPath)
+        {
+            try
+            {
+                // Utiliser Edge pour imprimer
+                Process printProcess = new Process();
+                printProcess.StartInfo.FileName = @"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe";
+                printProcess.StartInfo.Arguments = $"/print \"{documentPath}\""; // Argument pour imprimer un fichier PDF
+                //printProcess.StartInfo.CreateNoWindow = true;
+                printProcess.StartInfo.UseShellExecute = true;
+
+                printProcess.Start();
+                printProcess.WaitForExit();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erreur lors de l'impression : {ex.Message}");
+            }
+        }
     }
 }

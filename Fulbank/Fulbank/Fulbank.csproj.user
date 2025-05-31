@@ -16,6 +16,9 @@
     <Compile Update="View\Conversion\Conversion.Cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="View\Deposit.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="View\HomePage.cs">
       <SubType>Form</SubType>
     </Compile>

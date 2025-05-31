@@ -29,6 +29,7 @@ namespace Fulbank.View
             MainForm.MainPanel.Controls.Add(formhp);
             formhp.Show();
         }
+
         private void BankAcc_Load(object sender, EventArgs e)
         {
             loadMoney();
@@ -62,7 +63,5 @@ namespace Fulbank.View
                 MessageBox.Show($"Erreur: {ex.Message}");
             }
         }
-
-
     }
 }
