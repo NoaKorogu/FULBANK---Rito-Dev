@@ -59,6 +59,7 @@ INSERT INTO `Account` VALUES
 (9,0.000000,9,1,1,NULL),
 (10,0.000000,9,3,1,NULL),
 (11,0.000000,9,4,1,NULL);
+(12,0.000000,1,4,1,NULL),
 /*!40000 ALTER TABLE `Account` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -210,15 +211,11 @@ CREATE TABLE `Users` (
 LOCK TABLES `Users` WRITE;
 /*!40000 ALTER TABLE `Users` DISABLE KEYS */;
 INSERT INTO `Users` VALUES
-(1,'Kaneko','a5'),
-(2,'Noa','Enculer'),
+(1,'Killiann','a5'),
+(2,'Noa','b5'),
 (3,'un user','P@ssw0rd'),
 (4,'test','oui'),
 (5,'test2','oui'),
-(6,'test3','oui'),
-(7,'test4','oui'),
-(8,'test5','oui'),
-(9,'test6','oui');
 /*!40000 ALTER TABLE `Users` ENABLE KEYS */;
 UNLOCK TABLES;
 
