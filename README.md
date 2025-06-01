@@ -21,8 +21,7 @@ Lancez l’application depuis le menu démarrer ou le raccourci sur le bureau.
 ## 📤 Dump de la base de données
 Un fichier de dump SQL est disponible pour initialiser la base avec les structures et données de base nécessaires.
 
-Télécharger le dump SQL
-(À remplacer par un lien vers le fichier .sql sur le dépôt ou un hébergement externe)
+📄 [Télécharger le dump SQL](https://github.com/NoaKorogu/FULBANK---Rito-Dev/blob/main/Fulbank/Fulbank/Params/dump.sql)
 
 ## 📌 Instructions pour l'import :
 Créez une base vide (ex. atm_ide_db) dans votre SGBD (MySQL).
