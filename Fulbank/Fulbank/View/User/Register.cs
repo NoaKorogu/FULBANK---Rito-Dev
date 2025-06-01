@@ -1,4 +1,4 @@
-﻿using Fulbank.Model;
+using Fulbank.Model;
 using MySqlConnector;
 using System.Data;
 
@@ -70,12 +70,46 @@ namespace Fulbank.View
                     {
                         Singleton db = Singleton.Instance;
                         db.OpenConnection();
+                        int newId = user.getId() + 1;
 
                         using (MySqlCommand cmd = new MySqlCommand("INSERT INTO Users(id,username,`password`) VALUES(@id, @username, @password)", db.Connection))
                         {
-                            cmd.Parameters.AddWithValue("@id", user.getId() + 1);
+                            cmd.Parameters.AddWithValue("@id", newId);
                             cmd.Parameters.AddWithValue("@username", TxtboxUsername.Text);
                             cmd.Parameters.AddWithValue("@password", TxtboxPasswrd.Text);
+
+                            cmd.ExecuteNonQuery();
+                        }
+
+                        // Create the default accounts for the new user with Euro, Bitcoin, and Ethereum
+
+                        using (MySqlCommand cmd = new MySqlCommand("INSERT INTO Account(balance, idHolder, idCurrency, idType) VALUES(@balance, @idHolder, @idCurrency, @idType)", db.Connection))
+                        {
+                            cmd.Parameters.AddWithValue("@balance", 0.0);
+                            cmd.Parameters.AddWithValue("@idHolder", newId);
+                            cmd.Parameters.AddWithValue("@idCurrency", 1);
+                            cmd.Parameters.AddWithValue("@idType", 1); 
+
+
+                            cmd.ExecuteNonQuery();
+                        }
+
+                        using (MySqlCommand cmd = new MySqlCommand("INSERT INTO Account(balance, idHolder, idCurrency, idType) VALUES(@balance, @idHolder, @idCurrency, @idType)", db.Connection))
+                        {
+                            cmd.Parameters.AddWithValue("@balance", 0.0);
+                            cmd.Parameters.AddWithValue("@idHolder", newId);
+                            cmd.Parameters.AddWithValue("@idCurrency", 3);
+                            cmd.Parameters.AddWithValue("@idType", 1);
+
+                            cmd.ExecuteNonQuery();
+                        }
+
+                        using (MySqlCommand cmd = new MySqlCommand("INSERT INTO Account(balance, idHolder, idCurrency, idType) VALUES(@balance, @idHolder, @idCurrency, @idType)", db.Connection))
+                        {
+                            cmd.Parameters.AddWithValue("@balance", 0.0);
+                            cmd.Parameters.AddWithValue("@idHolder", newId);
+                            cmd.Parameters.AddWithValue("@idCurrency", 4);
+                            cmd.Parameters.AddWithValue("@idType", 1);
 
                             cmd.ExecuteNonQuery();
                         }
@@ -91,7 +125,7 @@ namespace Fulbank.View
                     }
                     catch
                     {
-                        MessageBox.Show("Il y a une erreur dans la création du compte");
+                        //MessageBox.Show("Il y a une erreur dans la création du compte");
                     }
                 }
             }
