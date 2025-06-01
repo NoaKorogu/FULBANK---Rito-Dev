@@ -8,7 +8,7 @@ Il permet le contrôle et la supervision de distributeurs prenant en charge à l
 L’installation est simple et rapide grâce au fichier MSI fourni.
 
 ## 🔗 Télécharger
-> 📦 [Télécharger Fulbank.msi (version 1.0)](https://github.com/NoaKorogu/FULBANK---Rito-Dev/releases/download/untagged-04288035bb7bdead2657/FulbankSetup.msi)
+> 📦 [Télécharger Fulbank.msi (version 1.0)](https://github.com/NoaKorogu/FULBANK---Rito-Dev/releases/download/untagged-82b565284ba251123507/FulbankSetup.msi)
 
 Une fois le fichier téléchargé :
 
