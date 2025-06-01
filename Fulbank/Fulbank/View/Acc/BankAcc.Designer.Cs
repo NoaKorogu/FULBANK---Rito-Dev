@@ -70,7 +70,6 @@
             Name = "BankAcc";
             Text = "BankAcc";
             Load += BankAcc_Load;
-            this.Load += new System.EventHandler(this.CryptoAcc_Load);
             ResumeLayout(false);
             PerformLayout();
         }
