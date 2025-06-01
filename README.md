@@ -16,6 +16,8 @@ Double-cliquez sur le fichier .msi.
 
 Suivez les instructions de l’installateur.
 
+Allez à l'endroit ou vous avez installé l'application puis dans le fichier Params/config.ini, mettez votre serveur.
+
 Lancez l’application depuis le menu démarrer ou le raccourci sur le bureau.
 
 ## 📤 Dump de la base de données
