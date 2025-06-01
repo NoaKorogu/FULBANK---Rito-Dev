@@ -84,6 +84,7 @@
             Margin = new Padding(7, 6, 7, 6);
             Name = "CryptoAcc";
             Text = "CryptoAcc";
+            this.Load += new System.EventHandler(this.CryptoAcc_Load);
             ResumeLayout(false);
             PerformLayout();
         }
