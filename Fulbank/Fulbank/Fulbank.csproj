@@ -9,6 +9,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Params\config.ini" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Params\config.ini">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Aspose.Words" Version="24.12.0" />
 	<PackageReference Include="ini-parser" Version="2.5.2" />
     <PackageReference Include="MySqlConnector" Version="2.4.0" />

@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fulbank", "Fulbank\Fulbank.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestUnitaire", "TestUnitaire\TestUnitaire.csproj", "{FA12A680-D3C4-433B-AD84-E0605CC41A50}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "FulbankSetup", "FulbankSetup\FulbankSetup.vdproj", "{D72E6552-DF70-87D1-F256-0EFA78885B5A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,8 @@ Global
 		{FA12A680-D3C4-433B-AD84-E0605CC41A50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA12A680-D3C4-433B-AD84-E0605CC41A50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA12A680-D3C4-433B-AD84-E0605CC41A50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D72E6552-DF70-87D1-F256-0EFA78885B5A}.Debug|Any CPU.ActiveCfg = Debug
+		{D72E6552-DF70-87D1-F256-0EFA78885B5A}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

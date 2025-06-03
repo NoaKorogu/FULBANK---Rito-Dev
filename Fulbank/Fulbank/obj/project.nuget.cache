@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hNaPEqqjCVI=",
+  "dgSpecHash": "gVtlk4XisnU=",
   "success": true,
-  "projectFilePath": "C:\\Users\\micka\\Documents\\Cours\\Projet\\FULBANK---Rito-Dev\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\Fulbank.csproj",
+  "projectFilePath": "C:\\Users\\micka\\Documents\\Cours\\EPREUVE\\Fulbank\\FULBANK---Rito-Dev\\Fulbank\\Fulbank\\Fulbank.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\micka\\.nuget\\packages\\aspose.words\\24.12.0\\aspose.words.24.12.0.nupkg.sha512",
     "C:\\Users\\micka\\.nuget\\packages\\autofac\\6.4.0\\autofac.6.4.0.nupkg.sha512",

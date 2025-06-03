@@ -39,6 +39,19 @@ namespace Fulbank.View
             LoadPricesAsync();
         }
 
+        private string GetCurrencySymbol(string currency)
+        {
+            return currency switch
+            {
+                "eur" => "€",
+                "usd" => "$",
+                "btc" => "BTC",
+                "eth" => "ETH",
+                "Bitcoin" => "BTC",
+                "Ethereum" => "ETH",
+                _ => currency
+            };
+        }
 
         private async Task LoadPricesAsync()
         {
@@ -70,8 +83,8 @@ namespace Fulbank.View
             // Vérifiez la valeur d'entrée
             if (userInput <= 0)
             {
-        Lbl_M2.Text = "0";
-        return;
+                Lbl_M2.Text = "0";
+                return;
             }
 
             // Déterminer le prix selon la devise
@@ -187,6 +200,22 @@ namespace Fulbank.View
             Lbl_M2.Text = convertedValue.ToString("0.######");
         }
 
+        private void UpdateLabelsReverseEth(decimal userInput, string type)
+        {
+            decimal price = type == "eur" ? priceETHeur : priceETHusd;
+
+            if (price <= 0)
+            {
+                MessageBox.Show("Erreur : Le prix de l'ETH est introuvable ou égal à zéro.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            decimal convertedValue = userInput * price;
+            Lbl_Type1.Text = "ETH";
+            Lbl_Type2.Text = type == "eur" ? "€" : "$";
+            Lbl_M2.Text = convertedValue.ToString("0.######");
+        }
+
         private void Btn_Leave_Click(object sender, EventArgs e)
         {
             FormHP formhp = new FormHP();
@@ -237,18 +266,21 @@ namespace Fulbank.View
                 Lbl_M1.Text = AmountValue;
                 if (decimal.TryParse(AmountValue, out decimal userValue))
                 {
-                    // Convertir en fonction de la devise
+                    // Conversion selon la devise source
                     if (CurrencyValue == "Bitcoin")
                     {
-                        UpdateLabels(userValue, "eur"); // Conversion de Bitcoin en Euro
+                        // Si la source est Bitcoin, on convertit vers EUR
+                        UpdateLabelsReverse(userValue, "eur");
                     }
                     else if (CurrencyValue == "Ethereum")
                     {
-                        UpdateLabelsEth(userValue, "eur"); // Conversion d'Ethereum en Euro
+                        // Si la source est Ethereum, on convertit vers EUR
+                        // Il faut une méthode UpdateLabelsReverseEth (voir plus bas)
+                        UpdateLabelsReverseEth(userValue, "eur");
                     }
                     else
                     {
-                        UpdateLabels(userValue, Lbl_Type1.Text == "€" ? "eur" : "usd"); // Conversion en fonction de la devise
+                        UpdateLabels(userValue, Lbl_Type1.Text == "€" ? "eur" : "usd");
                     }
                 }
                 else
@@ -260,41 +292,48 @@ namespace Fulbank.View
             {
                 Lbl_M1.Text = "0"; // Par défaut
             }
+            Lbl_Type1.Text = GetCurrencySymbol(CurrencyValue);
         }
 
         private void ChangeType()
         {
-            // Validation de l'entrée utilisateur
             if (!decimal.TryParse(Lbl_M1.Text, out decimal userValue))
             {
                 MessageBox.Show("Erreur : Valeur dans Lbl_M1.Text invalide ou vide.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            // Changement des labels et mise à jour dynamique
-            if (Lbl_Type1.Text == "€")
+            // Si la devise de gauche est une monnaie fiat
+            if (Lbl_Type1.Text == "€" || Lbl_Type1.Text == "$")
             {
-                Lbl_Type1.Text = "$";
-                Lbl_Type2.Text = "BTC"; // Conversion en BTC
-                UpdateLabels(userValue, "usd"); // Convertit 10 € en BTC
+                // Alterner entre euro et dollar
+                if (Lbl_Type1.Text == "€")
+                {
+                    Lbl_Type1.Text = "$";
+                    UpdateLabels(userValue, "usd");
+                }
+                else
+                {
+                    Lbl_Type1.Text = "€";
+                    UpdateLabels(userValue, "eur");
+                }
+                Lbl_Type2.Text = "BTC"; // Toujours BTC à droite pour ce mode
             }
-            else if (Lbl_Type1.Text == "$")
+            // Si la devise de gauche est une crypto
+            else if (Lbl_Type1.Text == "BTC" || Lbl_Type1.Text == "ETH")
             {
-                Lbl_Type1.Text = "€";
-                Lbl_Type2.Text = "BTC"; // Conversion en BTC
-                UpdateLabels(userValue, "eur"); // Convertit 10 $ en BTC
-            }
-            else if (Lbl_Type1.Text == "BTC")
-            {
-                Lbl_Type1.Text = "ETH";
-                Lbl_Type2.Text = "€"; // Conversion en EUR depuis ETH
-                UpdateLabelsEth(userValue, "eur");
-            }
-            else if (Lbl_Type1.Text == "ETH")
-            {
-                Lbl_Type1.Text = "BTC";
-                Lbl_Type2.Text = "$"; // Conversion en USD depuis BTC
-                UpdateLabels(userValue, "usd");
+                // Alterner entre BTC et ETH
+                if (Lbl_Type1.Text == "BTC")
+                {
+                    Lbl_Type1.Text = "ETH";
+                    UpdateLabelsReverseEth(userValue, "eur"); // Conversion ETH -> EUR
+                }
+                else
+                {
+                    Lbl_Type1.Text = "BTC";
+                    UpdateLabelsReverse(userValue, "eur"); // Conversion BTC -> EUR
+                }
+                Lbl_Type2.Text = "€"; // Toujours euro à droite pour ce mode
             }
             else
             {
@@ -303,12 +342,8 @@ namespace Fulbank.View
         }
 
 
-        private void Btn_Rev_Click(object sender, EventArgs e)
-        {
-            ChangeType();
-        }
 
-        private async void Btn_Change_Click(object sender, EventArgs e)
+        private void Btn_Rev_Click(object sender, EventArgs e)
         {
             if (!decimal.TryParse(Lbl_M1.Text, out decimal userValue))
             {
@@ -316,39 +351,83 @@ namespace Fulbank.View
                 return;
             }
 
+            // Si la devise est à gauche
+            if (Lbl_Type1.Text == "€" || Lbl_Type1.Text == "$")
+            {
+                if (Lbl_Type1.Text == "€")
+                {
+                    Lbl_Type1.Text = "$";
+                    UpdateLabels(userValue, "usd");
+                }
+                else
+                {
+                    Lbl_Type1.Text = "€";
+                    UpdateLabels(userValue, "eur");
+                }
+            }
+            // Si la devise est à droite
+            else if (Lbl_Type2.Text == "€" || Lbl_Type2.Text == "$")
+            {
+                if (Lbl_Type2.Text == "€")
+                {
+                    Lbl_Type2.Text = "$";
+                    // Conversion inverse BTC/ETH -> USD
+                    if (Lbl_Type1.Text == "BTC")
+                        UpdateLabelsReverse(userValue, "usd");
+                    else if (Lbl_Type1.Text == "ETH")
+                        UpdateLabelsReverseEth(userValue, "usd");
+                }
+                else
+                {
+                    Lbl_Type2.Text = "€";
+                    // Conversion inverse BTC/ETH -> EUR
+                    if (Lbl_Type1.Text == "BTC")
+                        UpdateLabelsReverse(userValue, "eur");
+                    else if (Lbl_Type1.Text == "ETH")
+                        UpdateLabelsReverseEth(userValue, "eur");
+                }
+            }
+        }
+
+
+        private void Btn_Change_Click(object sender, EventArgs e)
+        {
+            if (!decimal.TryParse(Lbl_M1.Text, out decimal userValue))
+            {
+                MessageBox.Show("Erreur : Valeur dans Lbl_M1.Text invalide ou vide.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Si la crypto est à gauche
             if (Lbl_Type1.Text == "BTC" || Lbl_Type1.Text == "ETH")
             {
-                // Si la crypto est à gauche (Lbl_Type1)
                 if (Lbl_Type1.Text == "BTC")
                 {
                     Lbl_Type1.Text = "ETH";
-                    UpdateLabelsEth(userValue, Lbl_Type2.Text == "€" ? "eur" : "usd");
+                    UpdateLabelsReverseEth(userValue, Lbl_Type2.Text == "€" ? "eur" : "usd");
                 }
-                else if (Lbl_Type1.Text == "ETH")
+                else
                 {
                     Lbl_Type1.Text = "BTC";
-                    UpdateLabels(userValue, Lbl_Type2.Text == "€" ? "eur" : "usd");
+                    UpdateLabelsReverse(userValue, Lbl_Type2.Text == "€" ? "eur" : "usd");
                 }
             }
+            // Si la crypto est à droite
             else if (Lbl_Type2.Text == "BTC" || Lbl_Type2.Text == "ETH")
             {
-                // Si la crypto est à droite (Lbl_Type2)
                 if (Lbl_Type2.Text == "BTC")
                 {
                     Lbl_Type2.Text = "ETH";
                     UpdateLabelsEth(userValue, Lbl_Type1.Text == "€" ? "eur" : "usd");
                 }
-                else if (Lbl_Type2.Text == "ETH")
+                else
                 {
                     Lbl_Type2.Text = "BTC";
                     UpdateLabels(userValue, Lbl_Type1.Text == "€" ? "eur" : "usd");
                 }
             }
-            else
-            {
-                MessageBox.Show("Erreur : Aucune crypto-monnaie valide dans les labels.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
+
 
         private void LogLabels() //Pour des logs temporaires
         {

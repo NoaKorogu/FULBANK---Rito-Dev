@@ -19,7 +19,11 @@ namespace Fulbank.Model
         {
             // Configuration file path
             string projectDirectory = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent?.Parent?.Parent?.FullName;
-            string configPath = Path.Combine(projectDirectory, "Params", "config.ini");
+            string configPath = Path.Combine(
+                AppDomain.CurrentDomain.BaseDirectory,
+                "Params",
+                "config.ini"
+            );
 
             //Check if the config file exists
             if (!File.Exists(configPath))
